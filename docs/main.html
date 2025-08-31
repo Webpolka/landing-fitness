@@ -341,7 +341,7 @@
 			</div>
 			<div class="row g-20">
 				<!-- 1 -->
-				<div class="col-sm-3">
+				<div class="col-lg-3 col-md-6">
 					<div class="abonement-card card-brand">
 						<div class="abonement-card_logo">
 							<svg class="icon icon--card-logo">
@@ -368,7 +368,7 @@
 				</div>
 
 				<!-- 2 -->
-				<div class="col-sm-3">
+				<div class="col-lg-3 col-md-6">
 					<div class="abonement-card card-sky">
 						<div class="abonement-card_logo">
 							<svg class="icon icon--card-logo">
@@ -395,7 +395,7 @@
 				</div>
 
 				<!-- 3 -->
-				<div class="col-sm-3">
+				<div class="col-lg-3 col-md-6">
 					<div class="abonement-card card-green">
 						<div class="abonement-card_logo">
 							<svg class="icon icon--card-logo">
@@ -422,7 +422,7 @@
 				</div>
 
 				<!-- 4 -->
-				<div class="col-sm-3">
+				<div class="col-lg-3 col-md-6">
 					<div class="abonement-card card-blue">
 						<div class="abonement-card_logo">
 							<svg class="icon icon--card-logo">
@@ -523,7 +523,7 @@
 			<div class="gallery-block_description">Cтраницы истории здоровья и красоты</div>
 			<div class="row gx-20">
 				<!-- 1 -->
-				<div class="col-sm-6">
+				<div class="col-xl-6">
 					<div class="gallery-block_text">
 						<p>
 							Каждая фотография в нашем альбоме — это маленький эпизод большого спортивного приключения. Она рассказывает о
@@ -542,9 +542,16 @@
 							собственной истории успеха.
 						</p>
 					</div>
+
+					<div class="gallery-block_text-sm">
+						<p>
+							от начинающих до профессионалов. Наши опытные тренеры разработают персональную программу тренировок, учитывающую
+							индивидуальные особенности вашего организма и поставленные вами цели
+						</p>
+					</div>
 				</div>
 				<!-- 2 -->
-				<div class="col-sm-6">
+				<div class="col-xl-6">
 					<div id="main-gallery" class="gallery-block_gallery">
 						<!-- Представление изображений -->
 						<div class="gallery_views">
@@ -598,9 +605,15 @@
 			</div>
 			<!-- форма -->
 			<form action="" class="akcii-block_form" id="main-form">
-				<input id="name" name="name" type="text" placeholder="Ваше имя" required autocomplete="on">
-				<input id="email" name="email" type="email" placeholder="Ваш E-mail" required autocomplete="on">
-				<input id="phone" name="phone" type="tel" placeholder="Ваш номер телефона" required autocomplete="on">
+				<div class="akcii-block_inputs">
+					<input id="name" name="name" type="text" placeholder="Ваше имя" required autocomplete="on">
+					<input id="email" name="email" type="email" placeholder="Ваш E-mail" required autocomplete="on">
+					<input id="phone" name="phone" type="tel" placeholder="Ваш номер телефона" required autocomplete="on">
+				</div>
+				<!-- мален текст -->
+				<div class="akcii-block_small-sm">
+					<p>Акция действительна для новых клиентов клуба</p>
+				</div>
 				<div class="btn-wrapper">
 					<button type="submit" class="btn">ПОЛУЧИТЬ</button>
 				</div>
@@ -608,10 +621,9 @@
 			<!-- политика конф -->
 			<div class="akcii-block_policy">
 				<p>
-					Оставляя свои контактные данные и нажимая «Получить », я соглашаюсь <br>
-                    пройти процедуру регистрации на Платформе, принимаю	условия <br>
-                    <a href="#">Пользовательского соглашения</a> и <a href="#">Политики конфиденциальности</a> в целях <br>
-                    заключения соглашения.
+					Оставляя свои контактные данные и нажимая «Получить », я соглашаюсь 
+					пройти процедуру регистрации на Платформе, принимаю условия 
+					<a href="#">Пользовательского соглашения</a> и <a href="#">Политики конфиденциальности</a> в целях заключения соглашения.
 				</p>
 			</div>
 			<!-- счетчик -->
@@ -633,9 +645,9 @@
 				</div>
 			</div>
 
-            <div class="akcii-block_picture">
-                <img class="img-responsive" src="./images/girl-2.png" alt="Form girl picture">
-            </div>
+			<div class="akcii-block_picture">
+				<img class="img-responsive" src="./images/girl-2.png" alt="Form girl picture">
+			</div>
 		</div>
 	</div>
 </section>
@@ -764,9 +776,9 @@
 			</main>
 			<footer class="footer">
 	<div class="container">
-		<div class="footer-grid">
+		<div class="row footer-row">
 			<!-- 1 -->
-			<div class="footer-grid_item">
+			<div class="col-lg-3 col-sm-6 footer-item-1">
 				<div class="footer-group">
 					<!-- Logo -->
 					<a href="index.html" class="footer-group_logo">
@@ -803,7 +815,7 @@
 				</div>
 			</div>
 			<!-- 2 -->
-			<div class="footer-grid_item">
+			<div class="col-lg-3 col-sm-6 footer-item-2">
 				<ul class="footer-list">
 					<li><a href="#">Абонементы стоимость</a></li>
 					<li><a href="#">Рассрочка/долями</a></li>
@@ -813,7 +825,7 @@
 				</ul>
 			</div>
 			<!-- 3 -->
-			<div class="footer-grid_item">
+			<div class="col-lg-3 col-sm-6 footer-item-3">
 				<ul class="footer-list">
 					<li>
 						<span class="small">г. Томск, Красноармейская, 114<br>
@@ -829,7 +841,7 @@
 				</ul>
 			</div>
 			<!-- 4 -->
-			<div class="footer-grid_item">
+			<div class="col-lg-3 col-sm-6 footer-item-4">
 				<div class="footer-subscribe">
 					<div class="footer-subscribe_title">
 						<strong>Подписка на новости</strong>

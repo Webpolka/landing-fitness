@@ -5,11 +5,33 @@ COMMAND BLOCK
 	padding-top: rem(100);
 	margin-bottom: rem(200);
 
+	@include lg {
+		padding-top: rem(60);
+		margin-bottom: rem(120);
+	}
+
+	@include sm {
+		padding-top: rem(40);
+		margin-bottom: rem(80);
+	}
+
 	&_title {
 		font-weight: 700;
 		font-size: rem(72);
 		line-height: 120%;
-		letter-spacing: -1%;
+		letter-spacing: -0.01em;
+
+		@include lg {
+			font-size: rem(46);
+		}
+
+		@include sm {
+			font-size: rem(28);
+			line-height: 120%;
+			text-transform: uppercase;
+			text-align: center;
+			color: var(--dark);
+		}
 	}
 
 	&_row {
@@ -31,40 +53,44 @@ COMMAND BLOCK
 			margin-left: -15px;
 			margin-right: -15px;
 		}
+
+		@include sm {
+			row-gap: rem(10);
+		}
 	}
 	&_col-1 {
 		order: 1;
-		@include md {
+		@media (max-width: 1200px) {
 			order: 1;
 		}
 	}
 	&_col-2 {
 		order: 2;
-		@include md {
+		@media (max-width: 1200px) {
 			order: 2;
 		}
 	}
 	&_col-3 {
 		order: 3;
-		@include md {
+		@media (max-width: 1200px) {
 			order: 4;
 		}
 	}
 	&_col-4 {
 		order: 4;
-		@include md {
+		@media (max-width: 1200px) {
 			order: 3;
 		}
 	}
 	&_col-5 {
 		order: 5;
-		@include md {
+		@media (max-width: 1200px) {
 			order: 5;
 		}
 	}
 	&_col-6 {
 		order: 6;
-		@include md {
+		@media (max-width: 1200px) {
 			order: 6;
 		}
 	}
@@ -73,17 +99,28 @@ COMMAND BLOCK
 		width: 53.6%;
 		padding-left: rem(62);
 		padding-right: rem(62);
-		@include lg {
+		@media (max-width: 1200px) {
+			width: 100%;
+			max-width: rem(800);
+			margin-inline: auto;
 			padding-left: rem(22);
 			padding-right: rem(22);
 		}
 
 		@include md {
-			width: 100%;
+			max-width: rem(600);
 			padding-left: var(--container-padding);
 			padding-right: var(--container-padding);
 		}
 	}
+	&_col-1 {
+		@include sm {
+			p {
+				text-align: left !important;
+			}
+		}
+	}
+
 	&_col-min {
 		display: flex;
 		flex-direction: column;
@@ -93,6 +130,9 @@ COMMAND BLOCK
 		padding-right: rem(62);
 
 		width: 46.2%;
+		@media (max-width: 1200px) {
+			width: 100%;
+		}
 		@include lg {
 			padding-left: rem(22);
 			padding-right: rem(22);
@@ -103,12 +143,29 @@ COMMAND BLOCK
 			padding-right: var(--container-padding);
 		}
 
+		@include sm {
+			gap: rem(13);
+		}
+
 		h2 {
+			font-family: var(--font-title);
 			font-weight: 700;
 			font-size: rem(48);
 			line-height: 110%;
 			letter-spacing: -0.01em;
 			color: var(--body-text);
+
+			@include lg {
+				font-size: rem(32);
+			}
+
+			@include sm {
+				padding-top: rem(15);
+
+				font-size: rem(24);
+				text-align: center;
+				color: var(--dark);
+			}
 		}
 
 		p,
@@ -120,32 +177,69 @@ COMMAND BLOCK
 			line-height: 140%;
 			letter-spacing: -0.01em;
 			color: var(--grey);
+
+			@include lg {
+				font-size: rem(18);
+			}
+		}
+		p {
+			@include sm {
+				font-family: var(--third-family);
+				font-weight: 400;
+				font-size: rem(16);
+				line-height: 140%;
+				letter-spacing: -0.01em;
+				text-align: center;
+				color: var(--body-text);
+			}
 		}
 		strong {
-			font-weight: 700;
+			font-weight: 700;			
+
+			@include sm {
+				font-family: var(--third-family);
+				font-weight: 600;
+				font-size: rem(16);
+				line-height: 140%;
+				letter-spacing: -0.01em;
+				text-align: center;
+				color: var(--body-text);
+			}
 		}
 	}
 	.swiper-slide {
 		user-select: none;
+		@media (max-width: 1200px) {
+			border-radius: rem(12);
+			overflow: hidden;
+		}
+
+		@include sm {
+			border-radius: rem(4);
+		}
 	}
 
 	/* Основные стили для стрелок */
 	.swiper-button-next,
 	.swiper-button-prev {
 		margin: 0 !important;
-		width: rem(40); 
-		height: rem(40); 
-		border-radius: 50%; 
+		width: rem(40);
+		height: rem(40);
+		border-radius: 50%;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		transition: background-color 0.3s, transform 0.3s;
 
 		transform: translateY(-50%);
+
+		@include sm {
+			display: none;
+		}
 	}
 
 	.swiper-button-next {
-		right: rem(10); 
+		right: rem(10);
 	}
 
 	.swiper-button-prev {

@@ -12,4 +12,19 @@ MAP
 			height: rem(460);
 		}
 	}
+
+	@include sm {
+		.container {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		iframe {
+			width: 100%;
+			height: rem(377);
+		}
+		&-block {
+			height: rem(377);
+			box-shadow: none;
+		}
+	}
 }

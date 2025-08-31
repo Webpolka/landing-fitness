@@ -6,6 +6,12 @@ GALLERY BLOCK
 	padding-bottom: rem(125);
 	background-color: var(--surface-color);
 
+	@include sm {
+		padding-top: rem(35);
+		padding-bottom: rem(40);
+		background-color: var(--white);
+	}
+
 	&-block {
 		&_title {
 			font-family: var(--font-title);
@@ -17,6 +23,31 @@ GALLERY BLOCK
 			color: var(--body-text);
 
 			margin-bottom: rem(30);
+			@include lg {
+				font-size: rem(48);
+			}
+
+			@include sm {
+				font-size: rem(28);
+				line-height: 120%;
+				text-align: center;
+				color: var(--dark);
+
+				margin-bottom: rem(25);
+			}
+		}
+
+		&_gallery {
+			@include xl {
+				margin-inline: auto;
+				max-width: rem(650);
+
+				border-radius: rem(5);
+				overflow: hidden;
+			}
+			@include sm{
+				border-radius: 0;
+			}
 		}
 
 		&_description {
@@ -28,12 +59,28 @@ GALLERY BLOCK
 			color: var(--grey);
 
 			margin-bottom: rem(30);
+
+			@include lg {
+				font-size: rem(33);
+			}
+
+			@include sm {
+				font-size: rem(24);
+				line-height: 110%;
+				text-align: center;
+				color: var(--brand-color);
+
+				margin-bottom: rem(20);
+			}
 		}
 
 		&_text {
-            ul{
-                padding-block: rem(8);
-            }
+			@include sm {
+				display: none;		
+			}
+			ul {
+				padding-block: rem(8);
+			}
 			p,
 			li {
 				font-weight: 400;
@@ -41,6 +88,9 @@ GALLERY BLOCK
 				line-height: 140%;
 				letter-spacing: -0.01em;
 				color: var(--body-text);
+				@include lg {
+					font-size: rem(18);
+				}
 			}
 			li:nth-child(2),
 			li:nth-child(4) {
@@ -54,8 +104,27 @@ GALLERY BLOCK
 			}
 			li {
 				margin-left: rem(30);
-                margin-bottom: rem(4);
+				margin-bottom: rem(4);
 				list-style: initial;
+			}
+
+			margin-bottom: rem(40);
+		}
+
+		&_text-sm {
+			display: none;
+
+			font-weight: 400;
+			font-size: rem(16);
+			line-height: 140%;
+			letter-spacing: -0.01em;
+			text-align: center;
+			color: var(--body-text);
+
+			margin-bottom: rem(20);
+
+			@include sm {
+				display: block;
 			}
 		}
 	}
@@ -84,6 +153,11 @@ GALLERY BLOCK
 		gap: rem(20);
 
 		margin-top: rem(20);
+
+		@include sm {
+			gap: rem(12);
+			margin-top: rem(8);
+		}
 	}
 
 	&_thumbnail {

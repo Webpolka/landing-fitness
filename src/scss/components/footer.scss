@@ -7,6 +7,16 @@ FOOTER
 	background: var(--dark);
 	padding-top: rem(100);
 
+	@include lg{
+		margin-top: rem(75);
+		padding-top: rem(65);
+	}
+
+	@include sm{
+		margin-top: rem(40);
+		padding-top: rem(35);
+	}
+
 	.small {
 		font-size: rem(14);
 	}
@@ -15,15 +25,27 @@ FOOTER
 		opacity: 0.5;
 	}
 
-    &-grid{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 6%;
+	&-row {
+		width: 95%;
+		margin-bottom: rem(130);
+		margin-inline: auto;
+		--bs-gutter-x: 3.75rem;
 
-        width: 95%;
+		@include lg {
+			width: 100%;
+			margin-bottom: rem(50);
+			--bs-gutter-x: 2.75rem;
+			--bs-gutter-y: 2.25rem;
+		}
 
-        margin-bottom: rem(130);
-    }
+		@include md {
+			--bs-gutter-y: 2.25rem;
+		}
+
+		@include sm{
+			margin-bottom: rem(32);
+		}
+	}
 
 	// группа лого и соц сети
 	&-group {
@@ -31,31 +53,36 @@ FOOTER
 		flex-direction: column;
 		gap: rem(25);
 
+		@include sm {
+			width: 100%;
+			max-width: rem(220);
+		}
+
 		&_logo {
 			svg,
 			.icon--logo-foo {
-				width: rem(220);
-				height: rem(146);
+				aspect-ratio: 220/146;
+				max-width: rem(220);
+				width: 100%;
 			}
 		}
 
 		&_social {
 			display: flex;
 			align-items: center;
-            justify-content: space-between;
+			justify-content: space-between;
 			gap: rem(10);
 
 			svg {
 				width: rem(24);
 				height: rem(24);
-                fill: #D6633F;
+				fill: #d6633f;
 
-                transition: all 0.3s ease-in-out;          
+				transition: all 0.3s ease-in-out;
 
-                &:hover{
-                    fill: #70CFFF ;
-                }
-               
+				&:hover {
+					fill: #70cfff;
+				}
 			}
 		}
 	}
@@ -66,13 +93,22 @@ FOOTER
 		flex-direction: column;
 		gap: rem(25);
 
+		@include lg {
+			gap: rem(20);
+		}
+
+		@include sm {
+			width: rem(220);
+		}
+
 		li a,
 		li {
 			font-weight: 400;
-			font-size: rem(16);
-			line-height: 140%;
+			font-size: rem(14);
+			line-height: 120%;
 			letter-spacing: -0.02em;
 			color: var(--white);
+			opacity: 0.95;
 		}
 		li a {
 			transition: all 0.3s ease-in-out;
@@ -90,6 +126,10 @@ FOOTER
 
 	// Подписка
 	&-subscribe {
+		@include sm {
+			max-width: rem(450);
+			width: 100%;
+		}
 		&_title {
 			strong {
 				display: block;
@@ -126,6 +166,7 @@ FOOTER
 
 			input {
 				background-color: transparent;
+				width: 100%;
 
 				&::placeholder {
 					font-weight: 400;
@@ -138,8 +179,14 @@ FOOTER
 
 			.icon-right,
 			svg {
+				stroke: white;
 				width: rem(24);
 				height: rem(24);
+
+				transition: all 0.3s ease-in-out;
+				&:hover{
+					stroke: var(--brand-color);
+				}
 			}
 		}
 	}
@@ -149,6 +196,10 @@ FOOTER
 		border-top: 1px solid rgb(255, 255, 255, 0.2);
 
 		width: 95%;
+
+		@include lg {
+			width: 100%;
+		}
 
 		p {
 			font-family: var(--font4);
@@ -162,6 +213,10 @@ FOOTER
 			padding-top: rem(30);
 			padding-bottom: rem(60);
 
+			@include sm{
+				padding-bottom: rem(20);
+			}
+
 			a {
 				color: var(--brand-color);
 
@@ -170,5 +225,65 @@ FOOTER
 				}
 			}
 		}
+	}
+}
+
+.footer-item-1 {
+	order: 1;
+	@include sm {
+		display: flex;
+		justify-content: center;
+		order: 1;
+
+		.footer-group {
+			gap: rem(15);
+		}
+	}
+}
+.footer-item-2 {
+	order: 2;
+	@include sm {
+		display: flex;
+		justify-content: center;
+		order: 3;
+
+		.footer-list {
+			text-align: center;
+			li a {
+				font-size: rem(16);
+			}
+		}
+	}
+}
+.footer-item-3 {
+	order: 3;
+	@include sm {
+		display: flex;
+		justify-content: center;
+		order: 2;
+
+		padding-bottom: rem(30);
+		border-bottom: 1px solid #474747;
+
+		margin-top: rem(25);
+	}
+	.footer-list {
+		gap: rem(30);
+		li {
+			line-height: 160%;
+		}
+
+		@include sm {			
+			gap: rem(20);
+			text-align: center;
+		}
+	}
+}
+.footer-item-4 {
+	order: 4;
+	@include sm {
+		display: flex;
+		justify-content: center;
+		order: 4;
 	}
 }

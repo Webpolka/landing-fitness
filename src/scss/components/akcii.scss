@@ -8,8 +8,18 @@ AKCII BLOCK
 	padding-top: rem(175);
 	padding-bottom: rem(100);
 
+	@include lg {
+		padding-top: rem(100);
+		padding-bottom: rem(50);
+	}
+
+	@include sm {
+		padding-top: rem(64);
+		padding-bottom: rem(40);
+	}
+
 	&-block {
-		position: relative;	
+		position: relative;
 
 		&_title {
 			position: relative;
@@ -33,6 +43,23 @@ AKCII BLOCK
 			padding: rem(10) rem(20);
 
 			margin-bottom: rem(10);
+			z-index: 1;
+			@media (max-width: 800px) {
+				font-size: rem(33);				
+			}
+
+			@include sm {
+				border-radius: rem(8);
+
+				font-family: var(--font-main);
+				font-weight: 800;
+				font-size: rem(20);
+				line-height: 132%;
+				text-transform: uppercase;
+				color: var(--white);
+
+				margin-bottom: rem(95);
+			}
 
 			&:before {
 				position: absolute;
@@ -47,6 +74,12 @@ AKCII BLOCK
 				background-position: center center;
 
 				transform: translate(25%, -65%);
+
+				@include sm {
+					width: rem(41);
+					height: rem(41);
+					transform: translate(10%, -65%);
+				}
 			}
 		}
 
@@ -58,6 +91,17 @@ AKCII BLOCK
 			color: var(--white);
 
 			margin-bottom: rem(10);
+			@media (max-width: 800px) {
+				font-size: rem(20);
+			}
+
+			@include sm {
+				font-family: var(--font-title);
+				font-size: rem(20);
+				line-height: 120%;
+				letter-spacing: -0.01em;
+				text-align: center;
+			}
 
 			.big-brand {
 				position: relative;
@@ -70,6 +114,20 @@ AKCII BLOCK
 				font-size: rem(40);
 				line-height: 0;
 				color: var(--brand-color);
+
+				@include sm {
+					top: rem(2);
+					font-family: var(--font-title);
+					font-weight: 700;
+					font-size: rem(28);
+					line-height: 120%;
+					letter-spacing: -0.01em;
+					text-transform: uppercase;
+					text-align: center;
+
+					padding-top: rem(10);
+					margin-bottom: rem(5);
+				}
 			}
 		}
 
@@ -81,17 +139,39 @@ AKCII BLOCK
 				line-height: 157%;
 				color: var(--grey);
 			}
-
-			margin-bottom: rem(25);
 		}
-
-		&_form {
+		&_small {
+			margin-bottom: rem(25);
+			@include sm {
+				display: none;
+			}
+		}
+		&_small-sm {
+			display: none;
+			font-weight: 400;
+			font-size: rem(14);
+			line-height: 140%;
+			letter-spacing: -0.01em;
+			color: var(--grey);
+			padding-block: rem(10);
+			@include sm {
+				display: block;
+			}
+		}
+		&_inputs {
 			display: flex;
 			flex-direction: column;
 			gap: rem(28);
 
 			margin-bottom: rem(25);
 
+			@include sm {
+				gap: rem(10);
+				margin-bottom: 0;
+			}
+		}
+
+		&_form {
 			input {
 				border-radius: rem(8);
 				padding: rem(13) rem(17);
@@ -100,10 +180,42 @@ AKCII BLOCK
 
 				width: 100%;
 
+				@include sm {
+					max-width: 100%;
+					min-height: rem(55);
+				}
+
 				&::placeholder {
 					font-weight: 400;
 					font-size: rem(18);
 					color: var(--grey);
+
+					@include sm {
+						font-size: rem(16);
+					}
+				}
+			}
+			.btn {
+				margin-bottom: rem(25);
+			}
+
+			@include sm {
+				.btn {
+					width: 100%;
+					min-height: rem(52);
+					background: #ff5e2c;
+					padding: rem(20) rem(48);
+
+					font-weight: 800;
+					font-size: rem(18);
+					line-height: 110%;
+					letter-spacing: -0.01em;
+					text-transform: uppercase;
+
+					justify-content: center;
+					color: var(--white);
+
+					margin-bottom: rem(10);
 				}
 			}
 		}
@@ -133,13 +245,21 @@ AKCII BLOCK
 			top: rem(165);
 			left: 53.3%;
 			transform: translateX(-50%);
-         
-             @media (max-width:1200px){
-                top: rem(80);
-                left: 85%;
-            }
-            
-            
+
+			@media (max-width: 1200px) {
+				top: rem(80);
+				left: 85%;
+			}
+
+			@media (max-width: 800px) {
+				transform: translate(-45%, -28%) scale(0.75);
+			}
+
+			@include sm {
+				top: rem(25);
+				left: 75.3%;
+				transform: translateX(-58%) scale(0.67);
+			}
 
 			&-inner {
 				position: relative;
@@ -173,6 +293,10 @@ AKCII BLOCK
 					background-position: center center;
 
 					transform: translate(-62%, -25%);
+
+					@include sm {
+						transform: translate(-62%, 35%);
+					}
 				}
 			}
 			&-text {
@@ -197,11 +321,21 @@ AKCII BLOCK
 		}
 
 		&_picture {
-            aspect-ratio: 600/678;
-			position: absolute;						
+			aspect-ratio: 600/678;
+			position: absolute;
 			bottom: rem(-100);
 			right: -8%;
 			width: rem(725);
+
+			@include lg {
+				right: -18%;
+				width: rem(600);
+				bottom: rem(-50);
+			}
+
+			@include md {
+				display: none;
+			}
 		}
 	}
 }
