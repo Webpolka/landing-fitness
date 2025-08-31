@@ -79,6 +79,28 @@ body {
 	white-space: nowrap !important;
 	border: 0 !important;
 }
+.no-scroll {
+	overflow: hidden;
+}
+.site-overlay {
+	opacity: 0;
+	visibility: hidden;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgb(0, 0, 0, 0.25);
+
+	z-index: 100;
+	transition: all 0.3s ease-in-out;
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+}
 
 .wrapper {
 	display: flex;

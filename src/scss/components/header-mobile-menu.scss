@@ -1,0 +1,133 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+HEADER MOBILE MENU
+--------------------------------------------------------------------------------------------------------------------------------*/
+
+.mobile-menu {
+	position: fixed;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	height: 100vh;
+
+	background: #1d1d20;
+	transition: all 0.8s ease-in-out;
+
+	&.active {
+		@media (max-width: 1100px) {
+			left: 0;
+		}
+	}
+
+	&_header {
+		width: 100%;
+		min-height: rem(70);
+
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 1px solid #353535;
+
+		background: #1d1d20;
+
+		padding-left: rem(16);
+	}
+
+	&_burger {
+		width: rem(70);
+		height: rem(70);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--brand-color);
+	}
+
+	&_phone {
+		display: inline-flex;
+		align-items: center;
+		gap: rem(5);
+		svg {
+			width: rem(24);
+			height: rem(24);
+		}
+		span {
+			font-weight: 400;
+			font-size: rem(20);
+			line-height: 140%;
+			letter-spacing: -0.01em;
+			color: var(--white);
+		}
+	}
+
+	&_content {
+		max-height: calc(100vh - 70px);
+		overflow-y: auto;
+
+		padding-bottom: rem(40);
+	}
+
+	&_list {
+		li:first-child {
+			border-bottom: 1px solid var(--brand-color);
+		}
+		li {
+			font-family: var(--font-title);
+			font-weight: 400;
+			font-size: rem(20);
+			line-height: 100%;
+			text-transform: uppercase;
+			text-align: center;
+
+			padding: rem(20);
+			border-bottom: 1px solid #353535;
+
+			a {
+				color: var(--white);
+				transition: all 0.3s ease-in-out;
+				&:hover {
+					color: var(--brand-color);
+				}
+			}
+		}
+	}
+
+	&_footer {
+		display: flex;
+		align-items: center;
+
+		margin-top: rem(20);
+		margin-inline: auto;
+
+		flex-direction: column;
+
+		max-width: rem(220);
+
+		.footer-group {
+			margin-bottom: rem(20);
+
+			gap: rem(15);
+		}
+
+		.footer-list {
+			text-align: center;
+			.small {
+				font-weight: 400;
+				font-size: rem(14);
+				line-height: 140%;
+				letter-spacing: -0.01em;
+				text-align: center;
+				color: var(--white);
+			}
+			strong {
+				margin-bottom: rem(10);
+			}
+			.small-opacity {
+				font-weight: 400;
+				font-size: rem(14);
+				line-height: 140%;
+				letter-spacing: -0.01em;
+				color: var(--white);
+				opacity: 0.5;
+				white-space: nowrap;
+			}
+		}
+	}
+}

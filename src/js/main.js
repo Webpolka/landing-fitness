@@ -3,6 +3,38 @@ BaseHelpers.addLoadedClass();
 BaseHelpers.calcScrollbarWidth();
 BaseHelpers.addTouchClass();
 
+/* ------------------------------------------------------------------------------------------------------------------------------
+BURGER
+--------------------------------------------------------------------------------------------------------------------------------*/
+document.addEventListener("DOMContentLoaded", function () {
+	const burger = document.querySelector("#burger");
+	const burgerClose = document.querySelector("#burger-close");
+
+	const mobileMenu = document.querySelector("#mobile-menu");
+	const siteOverlay = document.querySelector("#site-overlay");
+
+	burger.addEventListener("click", function () {		
+		mobileMenu.classList.add("active");
+		addNoScroll();
+	});
+	burgerClose.addEventListener("click", function () {		
+		mobileMenu.classList.remove("active");
+		removeNoScroll();
+	});
+	function addNoScroll() {
+		document.documentElement.classList.add("no-scroll");
+		// siteOverlay && siteOverlay.classList.add("active");
+	}
+
+	function removeNoScroll() {
+		document.documentElement.classList.remove("no-scroll");
+		// siteOverlay && siteOverlay.classList.remove("active");
+	}
+});
+
+/* ------------------------------------------------------------------------------------------------------------------------------
+SWIPER COMMAND
+--------------------------------------------------------------------------------------------------------------------------------*/
 document.addEventListener("DOMContentLoaded", function () {
 	const allCommandSwipers = document.querySelectorAll(".command-swiper");
 
@@ -169,7 +201,7 @@ if (mainGallery) {
 
 			thumbnail.classList.add("active");
 			// Скрываем все views
-			views.forEach((view) => (view.classList.remove("active")));
+			views.forEach((view) => view.classList.remove("active"));
 			// Показываем нужный view по индексу
 			if (views[index]) {
 				views[index].classList.add("active");

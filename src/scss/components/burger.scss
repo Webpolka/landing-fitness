@@ -1,0 +1,53 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+BURGER
+--------------------------------------------------------------------------------------------------------------------------------*/
+
+.burger {
+	position: relative;
+	display: inline-block;
+
+	width: rem(24);
+	height: rem(19);	
+	flex-shrink: 0;
+
+	cursor: pointer;
+
+	span,
+	&::before,
+	&::after {
+		display: block;
+		content: "";
+		transition: all 0.3s ease-in-out;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 3px;
+		background-color: var(--white);
+		border-radius: rem(10);
+		opacity: 0.85;
+	}
+	&::before {
+		top: 0;
+	}
+	&::after {
+		bottom: 0;
+	}
+	span {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	&.active span {
+		width: 0;
+		background-color: var(--white);
+	}
+	&.active::before {
+		top: 50%;
+		transform: translateY(-50%) rotate(-45deg);
+		background-color: var(--white);
+	}
+	&.active::after {
+		bottom: 50%;
+		transform: translateY(50%) rotate(45deg);
+		background-color: var(--white);
+	}
+}
