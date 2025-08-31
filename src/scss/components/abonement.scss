@@ -1,0 +1,228 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+ABONEMENT BLOCK
+--------------------------------------------------------------------------------------------------------------------------------*/
+.abonement {
+    padding-top: rem(95);
+    padding-bottom: rem(80);
+
+	&-block {
+		&_title {
+			font-family: var(--font-title);
+			font-weight: 700;
+			font-size: rem(72);
+			line-height: 110%;
+			letter-spacing: -0.01em;
+			text-transform: uppercase;
+            text-align: center;
+			color: var(--body-text);
+
+            margin-bottom: rem(20);
+		}
+
+		&_description {
+			font-family: var(--font-title);
+			font-weight: 700;
+			font-size: rem(50);
+			line-height: 120%;
+			letter-spacing: -0.01em;
+            text-align: center;
+			color: var(--grey);
+
+            margin-bottom: rem(30);
+		}
+
+		&_small {			
+			font-weight: 700;
+			font-size: rem(20);
+			line-height: 120%;
+			text-align: center;
+			color: var(--body-text);
+
+            margin-bottom: rem(70);
+		}
+	}
+
+    
+    
+
+	&-card {
+		position: relative;
+		border-radius: rem(16);
+		width: 100%;
+		min-height: rem(400);
+		background: #2e2e2e;
+		overflow: hidden;
+
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+
+		padding: rem(15);
+
+        &.card-sky,
+        &.card-blue{
+            margin-top: rem(150);
+        }
+
+		&_inner {
+			display: flex;
+			flex-direction: column;
+			gap: rem(45);
+		}
+
+		&_title {
+			font-family: var(--font-title);
+			font-weight: 700;
+			font-size: rem(48);
+			line-height: 110%;
+			letter-spacing: -0.01em;
+			text-align: center;
+			color: var(--white);
+		}
+
+		&_time {
+			font-weight: 700;
+			font-size: rem(36);
+			line-height: 140%;
+			letter-spacing: -0.01em;
+			text-align: center;
+			color: #babbbe;
+		}
+
+		&_quantity {
+			font-weight: 700;
+			font-size: rem(36);
+			line-height: 140%;
+			letter-spacing: -0.01em;
+			text-align: center;
+			color: var(--white);
+		}
+
+		&_group {
+			display: flex;
+			flex-direction: column;
+			gap: rem(10);
+		}
+
+		&_price {
+			p {
+				font-family: var(--font-title);
+				font-weight: 700;
+				font-size: rem(48);
+				line-height: 110%;
+				letter-spacing: -0.01em;
+				text-align: center;
+
+				margin-bottom: rem(5);
+			}
+			small {
+				display: block;
+				font-family: var(--font3);
+				font-style: italic;
+				font-weight: 500;
+				font-size: rem(18);
+				line-height: 120%;
+				letter-spacing: -0.02em;
+				text-align: center;
+			}
+			.price-dolly {
+				opacity: 0;
+			}
+		}
+
+		&_logo {
+			position: absolute;
+			top: rem(14);
+			left: rem(13);
+
+			width: rem(56);
+			height: rem(56);
+			border-radius: rem(84);
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			svg {
+				width: rem(46);
+				height: rem(46);
+			}
+		}
+
+		&_arrow {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			transform: translateX(-50%);
+			width: rem(152);
+			height: rem(152);
+		}
+
+		&.card-brand {
+			border: 1px solid #fe0faa;
+
+			.abonement-card_logo {
+				background-color: var(--brand-color);
+			}
+
+			.abonement-card_arrow {
+				fill: rgba(214, 99, 63, 0.1);
+				stroke-width: 4.45px;
+				stroke: rgba(214, 99, 63, 0.1);
+			}
+			.abonement-card_price p,
+			.abonement-card_price small {
+				color: var(--brand-color);
+			}
+		}
+		&.card-sky {
+			border: 1px solid #0191da;
+
+			.abonement-card_logo {
+				background-color: #0191da;
+			}
+			.abonement-card_arrow {
+				fill: rgba(1, 145, 218, 0.1);
+				stroke-width: 4px;
+				stroke: rgba(1, 145, 218, 0.1);
+			}
+			.abonement-card_price p,
+			.abonement-card_price small {
+				color: #0191da;
+			}
+		}
+		&.card-green {
+			border: 1px solid #18a000;
+
+			.abonement-card_logo {
+				background-color: #18a000;
+			}
+
+			.abonement-card_arrow {
+				fill: rgba(24, 160, 0, 0.1);
+				stroke-width: 4px;
+				stroke: rgba(24, 160, 0, 0.1);
+			}
+			.abonement-card_price p,
+			.abonement-card_price small {
+				color: #18a000;
+			}
+		}
+		&.card-blue {
+			border: 1px solid #6d6fff;
+			.abonement-card_logo {
+				background-color: #6d6fff;
+			}
+
+			.abonement-card_arrow {
+				fill: rgba(109, 111, 255, 0.1);
+				stroke-width: 4px;
+				stroke: rgba(109, 111, 255, 0.1);
+			}
+			.abonement-card_price p,
+			.abonement-card_price small {
+				color: #6d6fff;
+			}
+		}
+	}
+}

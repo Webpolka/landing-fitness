@@ -1,0 +1,32 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+COMPONENTS
+--------------------------------------------------------------------------------------------------------------------------------*/
+.btn {
+	border-radius: rem(16);
+	padding-inline: rem(48);
+	min-height: rem(62);
+
+	display: inline-flex;
+	align-items: center;
+
+	font-weight: 700;
+	font-size: rem(24);
+	line-height: 92%;
+	letter-spacing: -0.41%;
+	text-transform: uppercase;
+
+	color: var(--white);
+	background: var(--brand-color);
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		background: #ba5434;
+	}
+
+	&.btn-black {
+		background: var(--dark);
+		&:hover {
+			background: var(--body-text);
+		}
+	}
+}

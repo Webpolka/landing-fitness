@@ -1,0 +1,184 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+COMMAND BLOCK
+--------------------------------------------------------------------------------------------------------------------------------*/
+.command {
+	padding-top: rem(100);
+	margin-bottom: rem(200);
+
+	&_title {
+		font-weight: 700;
+		font-size: rem(72);
+		line-height: 120%;
+		letter-spacing: -1%;
+	}
+
+	&_row {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+
+		flex-wrap: wrap;
+		margin-left: -62px;
+		margin-right: -62px;
+
+		row-gap: rem(60);
+
+		@include lg {
+			margin-left: -22px;
+			margin-right: -22px;
+		}
+		@include md {
+			margin-left: -15px;
+			margin-right: -15px;
+		}
+	}
+	&_col-1 {
+		order: 1;
+		@include md {
+			order: 1;
+		}
+	}
+	&_col-2 {
+		order: 2;
+		@include md {
+			order: 2;
+		}
+	}
+	&_col-3 {
+		order: 3;
+		@include md {
+			order: 4;
+		}
+	}
+	&_col-4 {
+		order: 4;
+		@include md {
+			order: 3;
+		}
+	}
+	&_col-5 {
+		order: 5;
+		@include md {
+			order: 5;
+		}
+	}
+	&_col-6 {
+		order: 6;
+		@include md {
+			order: 6;
+		}
+	}
+
+	&_col-max {
+		width: 53.6%;
+		padding-left: rem(62);
+		padding-right: rem(62);
+		@include lg {
+			padding-left: rem(22);
+			padding-right: rem(22);
+		}
+
+		@include md {
+			width: 100%;
+			padding-left: var(--container-padding);
+			padding-right: var(--container-padding);
+		}
+	}
+	&_col-min {
+		display: flex;
+		flex-direction: column;
+		gap: rem(20);
+
+		padding-left: rem(62);
+		padding-right: rem(62);
+
+		width: 46.2%;
+		@include lg {
+			padding-left: rem(22);
+			padding-right: rem(22);
+		}
+		@include md {
+			width: 100%;
+			padding-left: var(--container-padding);
+			padding-right: var(--container-padding);
+		}
+
+		h2 {
+			font-weight: 700;
+			font-size: rem(48);
+			line-height: 110%;
+			letter-spacing: -0.01em;
+			color: var(--body-text);
+		}
+
+		p,
+		strong {
+			display: block;
+
+			font-weight: 400;
+			font-size: rem(20);
+			line-height: 140%;
+			letter-spacing: -0.01em;
+			color: var(--grey);
+		}
+		strong {
+			font-weight: 700;
+		}
+	}
+	.swiper-slide {
+		user-select: none;
+	}
+
+	/* Основные стили для стрелок */
+	.swiper-button-next,
+	.swiper-button-prev {
+		margin: 0 !important;
+		width: rem(40); 
+		height: rem(40); 
+		border-radius: 50%; 
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: background-color 0.3s, transform 0.3s;
+
+		transform: translateY(-50%);
+	}
+
+	.swiper-button-next {
+		right: rem(10); 
+	}
+
+	.swiper-button-prev {
+		left: rem(10);
+	}
+
+	.swiper-button-next::after,
+	.swiper-button-prev::after {
+		font-size: 20px;
+		color: #fff; /* цвет стрелки */
+		content: none !important;
+		margin: 0 !important;
+	}
+
+	.swiper-button-next {
+		background-image: url("../../icons/command-right.svg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 100% 100%;
+		background-color: transparent;
+	}
+
+	.swiper-button-prev {
+		background-image: url("../../icons/command-left.svg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 100% 100%;
+		background-color: transparent;
+	}
+
+	.swiper-button-next:hover,
+	.swiper-button-prev:hover {
+		background-color: rgba(0, 0, 0, 0.25);
+		transform: scale(1.1) translateY(-50%);
+	}
+}

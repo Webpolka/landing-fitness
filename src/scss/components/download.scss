@@ -1,0 +1,117 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+DOWNLOAD BLOCK
+--------------------------------------------------------------------------------------------------------------------------------*/
+.download {
+	padding-top: rem(100);
+	padding-bottom: rem(100);
+
+	&-block {
+		position: relative;
+		min-height: rem(326);
+		background: var(--brand-color);
+
+		max-width: rem(1190);
+		margin-inline: auto;
+
+		padding-top: rem(80);
+		padding-bottom: rem(40);
+
+		display: flex;
+		flex-direction: column;
+        gap: rem(40);
+
+		&:before {
+			position: absolute;
+			top: 0;
+			left: -150vw;
+			content: "";
+			height: 100%;
+			background: var(--brand-color);
+			width: 150vw;
+		}
+		&:after {
+			position: absolute;
+			top: 0;
+			right: -150vw;
+			content: "";
+			height: 100%;
+			background: var(--brand-color);
+			width: 150vw;
+		}
+
+		&_title {
+            font-family: var(--font-title);
+			font-weight: 700;
+			font-size: rem(40);
+			line-height: 110%;
+			letter-spacing: -0.01em;
+			color: var(--white);
+		}
+
+		&_description {
+			position: relative;
+			display: inline-block;
+			max-width: rem(250);
+
+			font-weight: 400;
+			font-size: rem(32);
+			line-height: 119%;
+			letter-spacing: -0.01em;
+			color: var(--white);
+		}
+		&_new {
+			position: absolute;
+			bottom: rem(10);
+			right: rem(-100);
+			min-height: rem(19);
+			border-radius: rem(4);
+			background: var(--white);
+
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+
+			padding-inline: rem(4);
+
+			font-weight: 700;
+			font-size: rem(9);
+			line-height: 122%;
+			letter-spacing: 0.11em;
+			text-transform: uppercase;
+			color: var(--brand-color);
+		}
+		&_buttons {
+			display: inline-flex;
+			align-items: center;
+			gap: rem(15);
+		}
+
+		&_picture {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			max-width: rem(400);
+			aspect-ratio: 400/354;
+		}
+	}
+
+	.btn-download {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        overflow: hidden;       
+
+        aspect-ratio: 162/48;
+		max-width: rem(162);
+        
+		svg {
+			width: 100%;
+			transition: all 0.3s ease-in-out;
+		}
+
+		&:hover svg {
+			opacity: 0.75;
+		}
+	}
+}

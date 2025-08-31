@@ -1,0 +1,138 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+SHEDULS DESKTOP
+--------------------------------------------------------------------------------------------------------------------------------*/
+
+.shedules {
+	padding-top: rem(240);
+	padding-bottom: rem(100);
+
+	background-color: var(--dark);
+
+	&_title {
+		text-align: center;
+		font-family: var(--font-title);
+		font-weight: 700;
+		font-size: rem(48);
+		line-height: 110%;
+		letter-spacing: -0.01em;
+		color: var(--white);
+
+		margin-bottom: rem(25);
+	}
+
+	&-desktop {
+		display: flex;
+		flex-direction: column;
+
+		/* Заголовки дней недели */
+		&_header {
+			display: flex;
+			justify-content: center;
+			margin-left: rem(100);
+			div {
+				flex: 1;
+				font-family: var(--font-title);
+				font-weight: 400;
+				font-size: rem(18);
+				line-height: 110%;
+				letter-spacing: -0.01em;
+				text-align: center;
+				text-transform: uppercase;
+				color: var(--brand-color);
+
+				padding-block: rem(30);
+			}
+		}
+
+		/* Строка времени */
+		&_time-row {
+			display: flex;
+			align-items: center;
+			gap: rem(10);
+
+			margin-bottom: rem(10);
+		}
+
+		.time {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			width: rem(90);
+			min-height: rem(60);
+			background-color: transparent;
+
+			font-family: var(--font-title);
+			font-weight: 400;
+			font-size: rem(24);
+			line-height: 110%;
+			letter-spacing: -0.01em;
+			color: var(--brand-color);
+			text-align: center;
+		}
+
+		/* Ячейки расписания */
+		.cell {
+			flex: 1;
+			height: rem(60);
+			background-color: var(--white-200);
+			overflow: hidden;
+		}
+
+		/* Цветные блоки внутри ячеек */
+		.lesson {
+			position: relative;
+			background-color: #fff;
+			height: inherit;
+			padding: rem(7) rem(5);
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			&:after {
+				position: absolute;
+				content: "";
+				right: 0;
+				top: 0;
+				height: 100%;
+				width: 4px;
+				z-index: 1;
+			}
+
+			&.lesson-yoga:after {
+				background-color: var(--fitness-yoga);
+			}
+			&.lesson-streching:after {
+				background-color: var(--streching);
+			}
+			&.lesson-funct:after {
+				background-color: var(--functional-training);
+			}
+			&.lesson-pilates:after {
+				background-color: var(--pilates);
+			}
+			&.lesson-health-back:after {
+				background-color: var(--health-back);
+			}
+			&.lesson-cardio:after {
+				background-color: var(--cardio-attack);
+			}
+
+			&-name {
+				font-weight: 400;
+				font-size: rem(16);
+				line-height: 140%;
+				letter-spacing: -0.02em;
+				color: var(--grey);
+			}
+			&-type {
+				font-weight: 700;
+				font-size: rem(14);
+				line-height: 140%;
+				letter-spacing: -0.02em;
+				text-transform: uppercase;
+				color: var(--body-text);
+			}
+		}
+	}
+}

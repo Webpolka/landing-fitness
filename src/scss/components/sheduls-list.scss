@@ -1,0 +1,95 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+SHEDULES LIST DESKTOP
+--------------------------------------------------------------------------------------------------------------------------------*/
+.shedules-list {
+	margin-bottom: rem(100);
+	border-bottom: 1px solid var(--brand-color);
+
+	&_block {
+		padding-top: rem(100);
+		padding-bottom: rem(100);
+	}
+
+	&_item {
+        margin-bottom: rem(40);
+
+		.item-title {
+			position: relative;
+			height: inherit;
+
+			min-height: rem(60);
+			padding-left: rem(12);
+
+            margin-bottom: rem(10);
+
+			&:after {
+				position: absolute;
+				content: "";
+				left: 0;
+				top: 0;
+				height: 100%;
+				width: 4px;
+				z-index: 1;
+			}
+			&-tabata:after {
+				background-color: var(--brand-color);
+			}
+			&-pilates:after {
+				background-color: var(--pilates);
+			}
+			&-funct:after {
+				background-color: var(--functional-training);
+			}
+			&-hot:after {
+				background-color: var(--hot-body);
+			}
+			&-cardio:after {
+				background-color: var(--cardio-attack);
+			}
+			&-pp:after {
+				background-color: var(--pandp);
+			}
+			&-step:after {
+				background-color: var(--step-pro);
+			}
+			&-streching:after {
+				background-color: var(--streching);
+			}
+			&-monster:after {
+				background-color: var(--monstr);
+			}
+			&-power:after {
+				background-color: var(--power);
+			}
+			&-health:after {
+				background-color: var(--health-back);
+			}
+			&-yoga:after {
+				background-color: var(--fitness-yoga);
+			}
+		}
+
+		.item-content {
+			position: relative;
+			display: block;
+			padding-left: rem(30);
+			
+			font-weight: 400;
+			font-size: rem(20);
+			line-height: 140%;
+			letter-spacing: -0.01em;
+			color: var(--dark);
+
+			&:after {
+				position: absolute;
+				top: rem(14);
+				left: rem(12);
+				content: "";
+				width: rem(5);
+				height: rem(5);
+				border-radius: 50%;
+				background-color: var(--dark);
+			}
+		}
+	}
+}

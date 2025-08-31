@@ -1,0 +1,120 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+GALLERY BLOCK
+--------------------------------------------------------------------------------------------------------------------------------*/
+.gallery {
+	padding-top: rem(100);
+	padding-bottom: rem(125);
+	background-color: var(--surface-color);
+
+	&-block {
+		&_title {
+			font-family: var(--font-title);
+			font-weight: 700;
+			font-size: rem(72);
+			line-height: 110%;
+			letter-spacing: -0.01em;
+			text-transform: uppercase;
+			color: var(--body-text);
+
+			margin-bottom: rem(30);
+		}
+
+		&_description {
+			font-family: var(--font-title);
+			font-weight: 700;
+			font-size: rem(50);
+			line-height: 120%;
+			letter-spacing: -0.01em;
+			color: var(--grey);
+
+			margin-bottom: rem(30);
+		}
+
+		&_text {
+            ul{
+                padding-block: rem(8);
+            }
+			p,
+			li {
+				font-weight: 400;
+				font-size: rem(20);
+				line-height: 140%;
+				letter-spacing: -0.01em;
+				color: var(--body-text);
+			}
+			li:nth-child(2),
+			li:nth-child(4) {
+				font-weight: 700;
+				color: var(--grey);
+			}
+			li:nth-child(1),
+			li:nth-child(3) {
+				font-weight: 700;
+				color: var(--dark);
+			}
+			li {
+				margin-left: rem(30);
+                margin-bottom: rem(4);
+				list-style: initial;
+			}
+		}
+	}
+
+	&_views {
+		aspect-ratio: 20/12;
+		overflow: hidden;
+	}
+	&_view {
+		display: none;
+		position: relative;
+		aspect-ratio: 20/12;
+		img {
+			position: absolute;
+		}
+
+		&.active {
+			display: block;
+			animation: fade-up 0.15s ease-in-out;
+		}
+	}
+
+	&_thumbnails {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: rem(20);
+
+		margin-top: rem(20);
+	}
+
+	&_thumbnail {
+		position: relative;
+		aspect-ratio: 20/12;
+		overflow: hidden;
+		width: 100%;
+
+		cursor: pointer;
+
+		&:after {
+			position: absolute;
+			content: "";
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: transparent;
+			transition: all 0.3s ease-in-out;
+		}
+
+		&.active {
+			&:after {
+				background: rgba(214, 99, 63, 0.8);
+			}
+		}
+
+		img {
+			position: absolute;
+			aspect-ratio: 20/12;
+			overflow: hidden;
+		}
+	}
+}

@@ -1,0 +1,64 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+BANNER
+--------------------------------------------------------------------------------------------------------------------------------*/
+.banner {
+	background-color: #060606;
+	min-height: rem(1080);
+
+	&-background {
+		min-height: rem(1080);
+		max-width: rem(1920);
+
+		padding-top: rem(240);
+        padding-bottom: rem(90);
+
+		background-image: url("../../images/banner-bg.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+
+		margin-inline: auto;
+
+        overflow: hidden;
+
+		@include lg{
+			background-position: 65% center;
+		}
+	}
+
+	&-block {
+		&_title {
+			font-weight: 700;
+			font-size: rem(72);
+			line-height: 130%;
+			letter-spacing: -0.01em;
+			text-transform: uppercase;
+			color: var(--brand-color);
+
+            margin-bottom: rem(25);
+			span {
+				font-weight: 700;
+				font-size: rem(50);
+				line-height: 120%;
+				letter-spacing: -0.01em;
+				color: var(--white);
+                text-transform: none;
+
+                display: block;
+                margin-bottom: rem(10);
+			}
+		}
+
+		&_text {			
+			font-weight: 400;
+			font-size: rem(20);
+			line-height: 140%;
+			letter-spacing: -0.01em;
+			color: var(--white);
+
+            width: 70%;
+
+            margin-bottom: rem(100);
+		}
+	}
+}

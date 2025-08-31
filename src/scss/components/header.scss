@@ -1,0 +1,103 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+HEADER
+--------------------------------------------------------------------------------------------------------------------------------*/
+.header {
+	max-height: rem(110);
+
+	background: #1d1d20;
+	position: absolute;
+
+	top: rem(25);
+	width: 100%;	
+	z-index: 1;
+
+	&_row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		max-height: rem(110);
+
+		width: 95%;
+	}
+
+	&_logo {
+		svg {
+			width: rem(110);
+			height: rem(110);
+		}
+	}
+
+	&_nav {
+		ul.header_menu {
+			display: inline-flex;
+			align-items: center;
+			gap: rem(45);
+
+			& > li {
+				span,
+				a {
+					font-weight: 500;
+					font-size: rem(20);
+					color: var(--white);
+
+					transition: all 0.3s ease-in-out;
+				}
+
+				span,
+				span.parent {
+					position: relative;
+					padding-right: rem(25);
+					cursor: pointer;
+
+					&:after {
+						content: "";
+						position: absolute;
+						top: 50%;
+						right: 0;
+						width: 0;
+						height: 0;
+						pointer-events: none;
+						border-left: rem(6) solid transparent;
+						border-right: rem(6) solid transparent;
+						border-top: rem(8) solid var(--white); /* Цвет стрелки */
+						transform: translateY(-30%);
+					}
+				}
+
+				&:hover {
+					span,
+					a {
+						color: var(--brand-color);
+					}
+					span:after,
+                    span.parent:after {
+						border-top: rem(8) solid var(--brand-color); /* Цвет стрелки */
+					}
+				}
+			}
+		}
+		ul.header_submenu {
+			display: none;
+		}
+	}
+
+	&_phone {
+		svg {
+			width: rem(24);
+			height: rem(24);
+		}
+	}
+
+	.btn {
+		gap: rem(10);
+
+		font-weight: 700;
+		font-size: rem(20);
+		line-height: 110%;
+		letter-spacing: -0.02em;
+		text-transform: uppercase;
+		text-align: center;
+		color: var(--white);
+	}
+}

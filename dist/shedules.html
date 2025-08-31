@@ -1,0 +1,738 @@
+<!doctype html>
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Расписание</title>
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+	<link rel="stylesheet" href="vendor/bootstrap-grid.css">
+	<link rel="stylesheet" href="./css/main.min.css">
+</head>
+
+
+	<body>
+		<div class="wrapper">			
+			<header class="header">
+	<div class="container">
+		<div class="header_row">
+			<!-- Лого -->
+			<a href="index.html" class="header_logo">
+				<svg class="icon icon--logo-header">
+					<use href="./icons/symbol/sprite.svg#logo-header"></use>
+				</svg>
+			</a>
+
+			<!-- Меню -->
+			<nav class="header_nav">
+				<ul class="header_menu">
+					<li>
+						<span class="parent">Информация о клубе</span>
+						<ul class="header_submenu">
+							<li><a href="#">О клубе</a></li>
+							<li><a href="#">Абонементы</a></li>
+							<li><a href="#">Мобильное приложение</a></li>
+							<li><a href="#">Команда</a></li>
+						</ul>
+					</li>
+					<li><a href="shedules.html">Расписание групповых тренировок</a></li>
+				</ul>
+			</nav>
+
+			<!-- Телефон -->
+			<div class="header_phone">
+				<a href="tel:1234567890" class="btn">
+					<svg class="icon icon--phone">
+						<use href="./icons/symbol/sprite.svg#phone"></use>
+					</svg>
+					<span>8-3832-xxxxx</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</header>
+
+			<main class="main">
+				<section class="shedules">
+	<h2 class="shedules_title">РАСПИСАНИЕ ГРУППОВЫХ ТРЕНИРОВОК</h2>
+	<div class="container">
+		<div class="shedules-desktop">
+			<!-- Заголовки дней -->
+			<div class="shedules-desktop_header">
+				<div>Понедельник</div>
+				<div>Вторник</div>
+				<div>Среда</div>
+				<div>Четверг</div>
+				<div>Пятница</div>
+				<div>Суббота</div>
+				<div>Воскресенье</div>
+			</div>
+
+			<!-- Уровень 08:00 -->
+			<div class="shedules-desktop_time-row">
+				<div class="time">08:00</div>
+				<div class="cell"></div>
+				<div class="cell">
+					<div class="lesson lesson-yoga">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">ФИТНЕС-ЙОГА</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="lesson lesson-yoga">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">ФИТНЕС-ЙОГА</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="lesson lesson-yoga">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">ФИТНЕС-ЙОГА</div>
+					</div>
+				</div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+			</div>
+
+			<!-- Уровень 09:00 -->
+			<div class="shedules-desktop_time-row">
+				<div class="time">09:00</div>
+				<div class="cell">
+					<div class="lesson lesson-streching">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Streching</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="lesson lesson-funct">
+						<div class="lesson-name">Ира Марученко</div>
+						<div class="lesson-type">Functional training</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="lesson lesson-pilates">
+						<div class="lesson-name">Ира Марученко</div>
+						<div class="lesson-type">Pilates/мфр</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="lesson lesson-funct">
+						<div class="lesson-name">Ира Марученко</div>
+						<div class="lesson-type">Functional training</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="lesson lesson-streching">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Streching</div>
+					</div>
+				</div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+			</div>
+
+			<!-- Уровень 10:00 -->
+			<div class="shedules-desktop_time-row">
+				<div class="time">10:00</div>
+				<div class="cell"></div>
+				<div class="cell">
+					<div class="lesson lesson-health-back">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Здоровая спина</div>
+					</div>
+				</div>
+				<div class="cell"></div>
+				<div class="cell">
+					<div class="lesson lesson-health-back">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Здоровая спина</div>
+					</div>
+				</div>
+				<div class="cell"></div>
+				<div class="cell">
+					<div class="lesson lesson-pilates">
+						<div class="lesson-name">Курагина Анастасия</div>
+						<div class="lesson-type">Pilates</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="lesson lesson-pilates">
+						<div class="lesson-name">Курагина Анастасия</div>
+						<div class="lesson-type">Pilates</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Уровень 11:00 -->
+			<div class="shedules-desktop_time-row">
+				<div class="time">11:00</div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell">
+					<div class="lesson lesson-cardio">
+						<div class="lesson-name">Курагина Анастасия</div>
+						<div class="lesson-type">Сardio attack</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="lesson lesson-health-back">
+						<div class="lesson-name">Дарья Клюева</div>
+						<div class="lesson-type">Здоровая спина</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Уровень 12:00 -->
+			<div class="shedules-desktop_time-row">
+				<div class="time">12:00</div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell">
+					<div class="lesson lesson-streching">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Streching</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="lesson lesson-streching">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Streching</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Уровень 13:00 -->
+			<div class="shedules-desktop_time-row">
+				<div class="time">13:00</div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell">
+					<div class="lesson lesson-streching">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Streching</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="lesson lesson-streching">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Streching</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="lesson lesson-streching">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Streching</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="lesson lesson-streching">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Streching</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="lesson lesson-streching">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Streching</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Уровень 14:00 -->
+			<div class="shedules-desktop_time-row">
+				<div class="time">14:00</div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+			</div>
+
+			<!-- Уровень 15:30 -->
+			<div class="shedules-desktop_time-row">
+				<div class="time">15:30</div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+			</div>
+
+			<!-- Уровень 16:30 -->
+			<div class="shedules-desktop_time-row">
+				<div class="time">16:30</div>
+				<div class="cell">
+					<div class="lesson lesson-streching">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Streching</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="lesson lesson-streching">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Streching</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="lesson lesson-streching">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Streching</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="lesson lesson-streching">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Streching</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="lesson lesson-streching">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Streching</div>
+					</div>
+				</div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+			</div>
+
+			<!-- Уровень 17:30 -->
+			<div class="shedules-desktop_time-row">
+				<div class="time">17:30</div>
+				<div class="cell">
+					<div class="lesson lesson-streching">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Streching</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="lesson lesson-streching">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Streching</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="lesson lesson-streching">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Streching</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="lesson lesson-streching">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Streching</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="lesson lesson-streching">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Streching</div>
+					</div>
+				</div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+			</div>
+
+			<!-- Уровень 18:30 -->
+			<div class="shedules-desktop_time-row">
+				<div class="time">18:30</div>
+				<div class="cell">
+					<div class="lesson lesson-streching">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Streching</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="lesson lesson-streching">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Streching</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="lesson lesson-streching">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Streching</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="lesson lesson-streching">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Streching</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="lesson lesson-streching">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Streching</div>
+					</div>
+				</div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+			</div>
+
+			<!-- Уровень 19:30 -->
+			<div class="shedules-desktop_time-row">
+				<div class="time">19:30</div>
+				<div class="cell">
+					<div class="lesson lesson-streching">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Streching</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="lesson lesson-streching">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Streching</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="lesson lesson-streching">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Streching</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="lesson lesson-streching">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Streching</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="lesson lesson-streching">
+						<div class="lesson-name">Анастасия Класс</div>
+						<div class="lesson-type">Streching</div>
+					</div>
+				</div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+			</div>
+
+			<!-- Уровень 20:30 -->
+			<div class="shedules-desktop_time-row">
+				<div class="time">20:30</div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+			</div>
+
+			<!-- Уровень 21:30 -->
+			<div class="shedules-desktop_time-row">
+				<div class="time">21:30</div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+				<div class="cell"></div>
+			</div>
+		</div>
+	</div>
+</section>
+               
+				<section class="shedules-list">
+	<h2 class="visually-hidden">Список</h2>
+	<div class="container">
+		<div class="shedules-list_block">
+			<div class="row">
+				<div class="col-sm-4">
+					<!-- 1 -->
+					<div class="shedules-list_item">
+						<h3 class="item-title item-title-tabata">Tabata</h3>
+						<div class="item-content">
+							<p>
+								это высокоинтенсивная интервальная тренировка. Этот метод основан на коротких, но очень интенсивных
+								упражнениях, чередующихся с короткими периодами отдыха. Оно подходит для тех, кто ценит эффективность и
+								хочет быстро видеть результаты.
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- 2 -->
+				<div class="col-sm-4">
+					<div class="shedules-list_item">
+						<h3 class="item-title item-title-pilates">Pilates</h3>
+						<div class="item-content">
+							<p>
+								это система физических упражнений, направленая на укрепление мышц, улучшение гибкости, осанки и общего
+								самочувствия через контроль движений и правильную технику выполнения.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 3 -->
+				<div class="col-sm-4">
+					<div class="shedules-list_item">
+						<h3 class="item-title item-title-funct">Functional training</h3>
+						<div class="item-content">
+							<p>
+								это вид физической подготовки, направленный на развитие движений, необходимых для выполнения повседневных
+								задач и улучшения общей функциональной способности организма. Он фокусируется на тренировке мышц и суставов
+								в условиях, максимально приближенных к реальной жизни или спортивной деятельности.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 4 -->
+				<div class="col-sm-4">
+					<div class="shedules-list_item">
+						<h3 class="item-title item-title-hot">Hot Body</h3>
+						<div class="item-content">
+							<p>
+								это силовая тренировка, направленная на сжигание жира и проработку всех групп мышц для моделирования
+								красивого и подтянутого тела, часто с элементами кардио нагрузки.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 5 -->
+				<div class="col-sm-4">
+					<div class="shedules-list_item">
+						<h3 class="item-title item-title-cardio">Сardio attack</h3>
+						<div class="item-content">
+							<p>
+								это интенсивная кардиотренировка, направленная на быстрое сжигание калорий, улучшение сердечно-сосудистой
+								системы и повышение общей выносливости. Обычно такие тренировки отличаются высокой динамичностью,
+								использованием различных упражнений и короткими перерывами для поддержания высокого пульса.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 6 -->
+				<div class="col-sm-4">
+					<div class="shedules-list_item">
+						<h3 class="item-title item-title-pp">Power+Problem</h3>
+						<div class="item-content">
+							<p>
+								это вид интенсивных силовых тренировок, направленный на проработку проблемных зон. Этот формат тренировки
+								часто проводится в круговом или интервальном режиме с использованием различного силового оборудования.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 7 -->
+				<div class="col-sm-4">
+					<div class="shedules-list_item">
+						<h3 class="item-title item-title-step">Step PRO</h3>
+						<div class="item-content">
+							<p>
+								это разновидность аэробики, основанная на выполнении комплекса упражнений под ритмичную музыку с
+								использованием специальной подставки — степ-платформы. Это интенсивная кардиотренировка, которая помогает
+								укрепить мышцы ног и ягодиц, улучшить работу сердечно-сосудистой системы, повысить выносливость и
+								способствует похудению за счет сжигания калорий.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 8 -->
+				<div class="col-sm-4">
+					<div class="shedules-list_item">
+						<h3 class="item-title item-title-streching">Streching</h3>
+						<div class="item-content">
+							<p>
+								это комплекс упражнений, направленных на увеличение гибкости мышц и суставов, а также на улучшение
+								подвижности тела. Этот вид физической активности играет важную роль в подготовке организма к тренировкам,
+								восстановлении после них и профилактике травм.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 9 -->
+				<div class="col-sm-4">
+					<div class="shedules-list_item">
+						<h3 class="item-title item-title-monster">Monster traininig</h3>
+						<div class="item-content">
+							<p>
+								это интенсивные, мощные и высокоэффективные тренировки, направленные на быстрый и значительный прирост силы
+								и выносливости. Такой подход предполагает использование тяжелых нагрузок, сложных упражнений и высокой
+								интенсивности для достижения максимальных результатов. Сжигает максимум калорий.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 10 -->
+				<div class="col-sm-4">
+					<div class="shedules-list_item">
+						<h3 class="item-title item-title-power">Power</h3>
+						<div class="item-content">
+							<p>
+								это интенсивные силовые тренировки, направленные на развитие силы, выносливости и проработку всех основных
+								мышечных групп. Эти занятия могут включать как силовые упражнения с использованием дополнительного
+								оборудования (гантели, гири, собственный вес), так и кардионагрузки, что способствует интенсивному
+								жиросжиганию и формированию рельефа тела.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 11 -->
+				<div class="col-sm-4">
+					<div class="shedules-list_item">
+						<h3 class="item-title item-title-health">Здоровая спина</h3>
+						<div class="item-content">
+							<p>
+								это комплекс мероприятий, программ и методов, направленных на лечение, профилактику и укрепление
+								позвоночника и мышечного корсета. Цель такого направления — улучшить осанку, снизить риск возникновения
+								болевых ощущений, повысить подвижность и качество жизни человека за счет правильного ухода за спиной,
+								физических упражнений, лечебной терапии и профилактических мер.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 12 -->
+				<div class="col-sm-4">
+					<div class="shedules-list_item">
+						<h3 class="item-title item-title-yoga">Фитнес-йога</h3>
+						<div class="item-content">
+							<p>
+								это сочетание древних йогических практик и современных фитнес-элементов, создающее баланс между активностью
+								и расслаблением. Она помогает укрепить мышцы, повысить гибкость и снизить уровень стресса, не перегружая
+								тело. Это направление идеально для тех, кто хочет заботиться о здоровье и внутренней гармонии без
+								изнурительных тренировок.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+               
+				<section class="map">
+	<h2 class="visually-hidden">Карта с местоположением спортивного зала «FREESTYLE» в Томске</h2>
+	<div class="container">
+		<div class="map-block">
+			<div style="position: relative; overflow: hidden">
+				<a href="https://yandex.ru/maps/org/fristayl/242233618600/?utm_medium=mapframe&utm_source=maps" style="color: #eee; font-size: 12px; position: absolute; top: 0px">Фристайл</a><a href="https://yandex.ru/maps/67/tomsk/category/fitness_club/184107363/?utm_medium=mapframe&utm_source=maps" style="color: #eee; font-size: 12px; position: absolute; top: 14px">Фитнес-клуб в Томске</a><a href="https://yandex.ru/maps/67/tomsk/category/sports_hall_gym/41430094175/?utm_medium=mapframe&utm_source=maps" style="color: #eee; font-size: 12px; position: absolute; top: 28px">Спортивный, тренажёрный зал в Томске</a><iframe src="https://yandex.ru/map-widget/v1/org/fristayl/242233618600/?ll=85.006209%2C56.512442&z=11" frameborder="1" allowfullscreen="true" style="position: relative"></iframe>
+			</div>
+		</div>
+	</div>
+</section>
+
+			</main>
+			<footer class="footer">
+	<div class="container">
+		<div class="footer-grid">
+			<!-- 1 -->
+			<div class="footer-grid_item">
+				<div class="footer-group">
+					<!-- Logo -->
+					<a href="index.html" class="footer-group_logo">
+						<svg class="icon icon--logo-foo">
+							<use href="./icons/symbol/sprite.svg#logo-foo"></use>
+						</svg>
+					</a>
+					<div class="footer-group_social">
+						<!-- phone link -->
+						<a href="tel:123455677">
+							<svg class="icon icon--phone-foo">
+								<use href="./icons/symbol/sprite.svg#phone-foo"></use>
+							</svg>
+						</a>
+						<!-- insta link -->
+						<a href="#">
+							<svg class="icon icon--insta-foo">
+								<use href="./icons/symbol/sprite.svg#insta-foo"></use>
+							</svg>
+						</a>
+						<!-- Whatssaap -->
+						<a href="#">
+							<svg class="icon icon--whatsapp-foo">
+								<use href="./icons/symbol/sprite.svg#whatsapp-foo"></use>
+							</svg>
+						</a>
+						<!-- VK -->
+						<a href="#">
+							<svg class="icon icon--vk-foo#">
+								<use href="./icons/symbol/sprite.svg#vk-foo"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- 2 -->
+			<div class="footer-grid_item">
+				<ul class="footer-list">
+					<li><a href="#">Абонементы стоимость</a></li>
+					<li><a href="#">Рассрочка/долями</a></li>
+					<li><a href="#">О КЛУБЕ</a></li>
+					<li><a href="#">Лицензия и документы</a></li>
+					<li><a href="#">Вопросы и ответы</a></li>
+				</ul>
+			</div>
+			<!-- 3 -->
+			<div class="footer-grid_item">
+				<ul class="footer-list">
+					<li>
+						<span class="small">г. Томск, Красноармейская, 114<br>
+							634034</span>
+					</li>
+					<li>
+						<strong>83822-</strong>
+						<span class="small-opacity">пн-сб 08:00–23:00; вс 10:00–22:00</span>
+					</li>
+					<li>
+						<strong>freestylecity@inbox.ru </strong>
+					</li>
+				</ul>
+			</div>
+			<!-- 4 -->
+			<div class="footer-grid_item">
+				<div class="footer-subscribe">
+					<div class="footer-subscribe_title">
+						<strong>Подписка на новости</strong>
+					</div>
+					<div class="footer-subscribe_desc">
+						<p class="small-opacity">Подписывайся на наши социальные сети и получай крутой контент про фитнесс</p>
+					</div>
+					<!-- HTML FORM-->
+					<form id="subscribe-form" class="footer-subscribe_form" action="">
+						<label for="subscribe-email" class="visually-hidden">E-mail</label>
+						<input type="email" id="subscribe-email" name="subscribe-email" placeholder="E-mail*" required autocomplete="on">
+						<button type="submit" aria-label="Subscribe">
+							<svg class="icon icon--right">
+								<use href="./icons/symbol/sprite.svg#right"></use>
+							</svg>
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer-copy">
+			<p>© Copyright 2025 «FitnessClub» | <a href="#">Privacy Policy</a></p>
+		</div>
+	</div>
+</footer>
+
+		</div>
+		
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./js/main.min.js"></script>
+
+	</body>
+</html>

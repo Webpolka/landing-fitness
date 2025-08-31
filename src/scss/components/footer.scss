@@ -1,0 +1,174 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+FOOTER
+--------------------------------------------------------------------------------------------------------------------------------*/
+.footer {
+	margin-top: rem(100);
+
+	background: var(--dark);
+	padding-top: rem(100);
+
+	.small {
+		font-size: rem(14);
+	}
+	.small-opacity {
+		font-size: rem(14);
+		opacity: 0.5;
+	}
+
+    &-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 6%;
+
+        width: 95%;
+
+        margin-bottom: rem(130);
+    }
+
+	// группа лого и соц сети
+	&-group {
+		display: inline-flex;
+		flex-direction: column;
+		gap: rem(25);
+
+		&_logo {
+			svg,
+			.icon--logo-foo {
+				width: rem(220);
+				height: rem(146);
+			}
+		}
+
+		&_social {
+			display: flex;
+			align-items: center;
+            justify-content: space-between;
+			gap: rem(10);
+
+			svg {
+				width: rem(24);
+				height: rem(24);
+                fill: #D6633F;
+
+                transition: all 0.3s ease-in-out;          
+
+                &:hover{
+                    fill: #70CFFF ;
+                }
+               
+			}
+		}
+	}
+
+	// Список
+	&-list {
+		display: inline-flex;
+		flex-direction: column;
+		gap: rem(25);
+
+		li a,
+		li {
+			font-weight: 400;
+			font-size: rem(16);
+			line-height: 140%;
+			letter-spacing: -0.02em;
+			color: var(--white);
+		}
+		li a {
+			transition: all 0.3s ease-in-out;
+			&:hover {
+				color: var(--brand-color);
+			}
+		}
+
+		strong {
+			display: block;
+			font-weight: 700;
+			line-height: 100%;
+		}
+	}
+
+	// Подписка
+	&-subscribe {
+		&_title {
+			strong {
+				display: block;
+
+				font-weight: 700;
+				font-size: rem(16);
+				line-height: 120%;
+				letter-spacing: -0.05em;
+				color: var(--white);
+			}
+
+			margin-bottom: rem(25);
+		}
+
+		&_desc {
+			p {
+				font-weight: 400;
+				font-size: rem(14);
+				line-height: 150%;
+				letter-spacing: -0.05em;
+				color: var(--white);
+			}
+
+			margin-bottom: rem(25);
+		}
+
+		&_form {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			border-bottom: 1px solid var(--white);
+
+			padding-block: rem(10);
+
+			input {
+				background-color: transparent;
+
+				&::placeholder {
+					font-weight: 400;
+					font-size: rem(14);
+					line-height: 100%;
+
+					color: var(--white);
+				}
+			}
+
+			.icon-right,
+			svg {
+				width: rem(24);
+				height: rem(24);
+			}
+		}
+	}
+
+	// Копирайт
+	&-copy {
+		border-top: 1px solid rgb(255, 255, 255, 0.2);
+
+		width: 95%;
+
+		p {
+			font-family: var(--font4);
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 100%;
+			color: var(--brand-color);
+
+			text-align: center;
+
+			padding-top: rem(30);
+			padding-bottom: rem(60);
+
+			a {
+				color: var(--brand-color);
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
