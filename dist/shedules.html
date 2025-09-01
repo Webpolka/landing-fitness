@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Расписание</title>
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 	<link rel="stylesheet" href="vendor/bootstrap-grid.css">
 	<link rel="stylesheet" href="postcss/main.min.css">
@@ -14,53 +15,7 @@
 
 	<body>
 		<div class="site-overlay" id="site-overlay"></div>
-		<div class="wrapper">			
-			<header class="header">
-	<div class="container">
-		<div class="header_row">
-			<!-- Лого -->
-			<a href="index.html" class="header_logo">
-				<svg class="icon icon--logo-header">
-					<use href="./icons/symbol/sprite.svg#logo-header"></use>
-				</svg>
-			</a>
-
-			<!-- Меню -->
-			<nav class="header_nav">
-				<ul class="header_menu">
-					<li>
-						<span class="parent">Информация о клубе</span>
-						<ul class="header_submenu">
-							<li><a href="#">О клубе</a></li>
-							<li><a href="#">Абонементы</a></li>
-							<li><a href="#">Мобильное приложение</a></li>
-							<li><a href="#">Команда</a></li>
-						</ul>
-					</li>
-					<li><a href="shedules.html">Расписание групповых тренировок</a></li>
-				</ul>
-			</nav>
-
-			<!-- Телефон -->
-			<div class="header_phone">
-				<a href="tel:1234567890" class="btn">
-					<svg class="icon icon--phone">
-						<use href="./icons/symbol/sprite.svg#phone"></use>
-					</svg>
-					<span>8-3832-xxxxx</span>
-				</a>
-			</div>
-
-			<!-- Бургер -->
-			<div class="header_burger">
-				<button id="burger" class="burger">
-					<span></span>
-				</button>
-			</div>
-		</div>
-	</div>
-
-	<!-- МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ -->
+		<!-- МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ -->
 <div class="mobile-menu" id="mobile-menu">
 	<div class="mobile-menu_header">
 		<!-- Позвонить -->
@@ -82,10 +37,10 @@
 	<div class="mobile-menu_content">
 		<ul class="mobile-menu_list">
 			<li><a href="shedules.html">Расписание групповых тренировок</a></li>
-			<li><a href="#">О клубе</a></li>
-			<li><a href="#">Абонементы</a></li>
-			<li><a href="#">Мобильное приложение</a></li>
-			<li><a href="#">Команда</a></li>
+			<li><a href="index.html#about-club">О клубе</a></li>
+			<li><a href="index.html#abonement-club">Абонементы</a></li>
+			<li><a href="index.html#mobile-club">Мобильное приложение</a></li>
+			<li><a href="index.html#command-club">Команда</a></li>
 		</ul>
 
 		<div class="mobile-menu_footer">
@@ -141,7 +96,51 @@
 	</div>
 </div>
 
+		<div class="wrapper">			
+			<header class="header">
+	<div class="container">
+		<div class="header_row">
+			<!-- Лого -->
+			<a href="index.html" class="header_logo">
+				<svg class="icon icon--logo-header">
+					<use href="./icons/symbol/sprite.svg#logo-header"></use>
+				</svg>
+			</a>
 
+			<!-- Меню -->
+			<nav class="header_nav">
+				<ul class="header_menu">
+					<li>
+						<span class="parent">Информация о клубе</span>
+						<ul class="header_submenu">
+							<li><a href="index.html#about-club">О клубе</a></li>
+							<li><a href="index.html#abonement-club">Абонементы</a></li>
+							<li><a href="index.html#mobile-club">Мобильное приложение</a></li>
+							<li><a href="index.html#command-club">Команда</a></li>
+						</ul>
+					</li>
+					<li><a href="shedules.html">Расписание групповых тренировок</a></li>
+				</ul>
+			</nav>
+
+			<!-- Телефон -->
+			<div class="header_phone">
+				<a href="tel:1234567890" class="btn">
+					<svg class="icon icon--phone">
+						<use href="./icons/symbol/sprite.svg#phone"></use>
+					</svg>
+					<span>8-3832-xxxxx</span>
+				</a>
+			</div>
+
+			<!-- Бургер -->
+			<div class="header_burger">
+				<button id="burger" class="burger">
+					<span></span>
+				</button>
+			</div>
+		</div>
+	</div>
 </header>
 
 			<main class="main">
@@ -768,9 +767,9 @@
 			<!-- 2 -->
 			<div class="col-lg-3 col-sm-6 footer-item-2">
 				<ul class="footer-list">
-					<li><a href="#">Абонементы стоимость</a></li>
+					<li><a href="index.html#abonement-club">Абонементы стоимость</a></li>
 					<li><a href="#">Рассрочка/долями</a></li>
-					<li><a href="#">О КЛУБЕ</a></li>
+					<li><a href="index.html#about-club">О КЛУБЕ</a></li>
 					<li><a href="#">Лицензия и документы</a></li>
 					<li><a href="#">Вопросы и ответы</a></li>
 				</ul>
@@ -822,6 +821,7 @@
 
 		</div>
 		
+<script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="./js/main.min.js"></script>
 

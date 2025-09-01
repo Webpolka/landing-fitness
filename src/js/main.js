@@ -4,6 +4,81 @@ BaseHelpers.calcScrollbarWidth();
 BaseHelpers.addTouchClass();
 
 /* ------------------------------------------------------------------------------------------------------------------------------
+KEEN ABONEMENT SLIDER
+--------------------------------------------------------------------------------------------------------------------------------*/
+document.addEventListener("DOMContentLoaded", function () {
+	function initSliderAgain() {
+		keenSlider = new KeenSlider("#abonement-slider", {
+			loop: true,
+			slides: {
+				perView: 2.2,
+				spacing: 20,
+			},
+			breakpoints: {
+				"(max-width: 660px)": {
+					slides: { perView: 1.6, spacing: 18 },
+				},
+			},
+		});
+	}
+
+	// Инициализация слайдера
+	var keenSlider = new KeenSlider("#abonement-slider", {
+		loop: true,
+		slides: {
+			perView: 2.2,
+			spacing: 20,
+		},
+		breakpoints: {
+			"(max-width: 660px)": {
+				slides: { perView: 1.6, spacing: 18 },
+			},
+		},
+	});
+
+	updateKeenDestroyer(keenSlider);
+
+	window.onresize = updateKeenDestroyer;
+	window.onchange = updateKeenDestroyer;
+
+	function updateKeenDestroyer() {
+		const sliderContainer = document.querySelector("#abonement-slider");
+		const screenWidth = window.innerWidth;
+
+		// Переключение на адаптивные блоки при ширине экрана меньше breakpoint
+		if (screenWidth >= 992) {
+			removeClasses(sliderContainer, "keen-slider");
+			addClasses(sliderContainer, "row g-20");
+
+			for (let slide of sliderContainer.children) {
+				removeClasses(slide, "keen-slider__slide");
+				addClasses(slide, "col-lg-6 col-xl-3"); // Используем Bootstrap классы
+			}
+			keenSlider.destroy();
+		} else if (screenWidth < 992) {
+			removeClasses(sliderContainer, "row g-20");
+			addClasses(sliderContainer, "keen-slider");
+
+			for (let slide of sliderContainer.children) {
+				removeClasses(slide, "col-lg-6 col-xl-3");
+				addClasses(slide, "keen-slider__slide");
+			}
+			initSliderAgain();
+		}
+	}
+
+	function addClasses(el, classes) {
+		var classNames = classes.split(" ");
+		classNames.forEach((name) => el.classList.add(name));
+		return el;
+	}
+	function removeClasses(el, classes) {
+		var classNames = classes.split(" ");
+		classNames.forEach((name) => el.classList.remove(name));
+		return el;
+	}
+});
+/* ------------------------------------------------------------------------------------------------------------------------------
 BURGER
 --------------------------------------------------------------------------------------------------------------------------------*/
 document.addEventListener("DOMContentLoaded", function () {
@@ -11,13 +86,22 @@ document.addEventListener("DOMContentLoaded", function () {
 	const burgerClose = document.querySelector("#burger-close");
 
 	const mobileMenu = document.querySelector("#mobile-menu");
-	const siteOverlay = document.querySelector("#site-overlay");
+	const allMobileLinks = mobileMenu.querySelector(".mobile-menu_list").querySelectorAll("a");
 
-	burger.addEventListener("click", function () {		
+	// const siteOverlay = document.querySelector("#site-overlay");
+
+	allMobileLinks.forEach((link) => {
+		link.addEventListener("click", function () {
+			mobileMenu.classList.remove("active");
+			removeNoScroll();
+		});
+	});
+
+	burger.addEventListener("click", function () {
 		mobileMenu.classList.add("active");
 		addNoScroll();
 	});
-	burgerClose.addEventListener("click", function () {		
+	burgerClose.addEventListener("click", function () {
 		mobileMenu.classList.remove("active");
 		removeNoScroll();
 	});
@@ -64,12 +148,12 @@ welcomeSwiper &&
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",
 		},
-		spaceBetween: 20,
+		spaceBetween: 15,
 
 		breakpoints: {
 			640: {
 				slidesPerView: 2,
-				spaceBetween: 20,
+				spaceBetween: 15,
 			},
 			1024: {
 				slidesPerView: 3,
@@ -181,7 +265,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* ------------------------------------------------------------------------------------------------------------------------------
-Timer 24 hours
+Main gallery
 --------------------------------------------------------------------------------------------------------------------------------*/
 const mainGallery = document.querySelector("#main-gallery");
 if (mainGallery) {

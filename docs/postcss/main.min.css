@@ -907,7 +907,12 @@ BANNER
   overflow: hidden;
 }
 
+.banner-block {
+  position: relative;
+}
+
 .banner-block_title {
+  font-family: var(--font-title);
   font-weight: 700;
   font-size: 4.5rem;
   line-height: 130%;
@@ -1360,6 +1365,15 @@ DOWNLOAD BLOCK
   aspect-ratio: 400/354;
 }
 
+.download-block_picture-md {
+  position: absolute;
+  bottom: 0;
+  max-width: 7.875rem;
+  aspect-ratio: 137/245;
+  display: none;
+  z-index: 1;
+}
+
 .download .btn-download {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1787,6 +1801,7 @@ HEADER MOBILE MENU
   background: #1d1d20;
   -webkit-transition: all 0.8s ease-in-out;
   transition: all 0.8s ease-in-out;
+  z-index: 9999;
 }
 
 .mobile-menu_header {
@@ -2161,10 +2176,19 @@ OFFERS BLOCK
 }
 
 .offers-block_row {
-  display: grid;
-  grid-template-columns: 44fr 56fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   gap: 26%;
   margin-bottom: 1.875rem;
+}
+
+.offers-block .column-1 {
+  width: 44%;
+}
+
+.offers-block .column-2 {
+  width: 56%;
 }
 
 .offers-block_col,
@@ -2737,6 +2761,21 @@ Timer 24 hours
 
 .welcome .swiper {
   overflow: visible;
+  position: relative;
+}
+
+.welcome .swiper:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  height: 100%;
+  width: 120vh;
+  background: var(--surface-color);
+  z-index: 2;
 }
 
 .welcome .swiper-wrapper {
@@ -2913,10 +2952,67 @@ KEYFRAMES
 MEDIAQUERIES 
 --------------------------------------------------------------------------------------------------------------------------------*/
 
+@media (max-width: 1370px) {
+  .abonement-card_quantity {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 1330px) {
+  .abonement-card_title {
+    font-size: 2.25rem;
+  }
+
+  .abonement-card_time {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 1300px) {
+  .download-block_picture {
+    max-width: 18.75rem;
+  }
+}
+
 @media (max-width: 1200px) {
+  .abonement-card_title {
+    font-size: 2.25rem;
+  }
+
+  .abonement-card_time {
+    font-size: 2.25rem;
+  }
+
+  .abonement-card_quantity {
+    font-size: 2.25rem;
+  }
+
   .akcii-block_counter {
     top: 5rem;
     left: 85%;
+  }
+
+  .banner {
+    min-height: 46.875rem;
+  }
+
+  .banner-background {
+    padding-top: 8.75rem;
+    padding-bottom: 3.75rem;
+    min-height: 46.875rem;
+    background-position: 65% center;
+  }
+
+  .banner-block_title {
+    font-size: 3rem;
+  }
+
+  .banner-block_title span {
+    font-size: 2.25rem;
+  }
+
+  .banner-block_text {
+    font-size: 1.125rem;
   }
 
   .command_col-1 {
@@ -2972,11 +3068,29 @@ MEDIAQUERIES
     overflow: hidden;
   }
 
+  .download-block_picture {
+    z-index: 1;
+    max-width: 16.25rem;
+  }
+
   .gallery-block_gallery {
     margin-inline: auto;
     max-width: 40.625rem;
     border-radius: 0.3125rem;
     overflow: hidden;
+  }
+
+  .header_nav ul.header_menu {
+    gap: 2.1875rem;
+  }
+
+  .header_nav ul.header_menu > li > span,
+  .header_nav ul.header_menu > li > a {
+    font-size: 1rem;
+  }
+
+  .offers-block_row {
+    gap: 10%;
   }
 }
 
@@ -3020,6 +3134,29 @@ MEDIAQUERIES
 }
 
 @media (max-width: 992px) {
+  .abonement {
+    padding-top: 4.0625rem;
+    padding-bottom: 5rem;
+  }
+
+  .abonement-block_title {
+    font-size: 3rem;
+  }
+
+  .abonement-block_description {
+    font-size: 2.0625rem;
+  }
+
+  .abonement-block_small {
+    font-size: 1.125rem;
+    margin-bottom: 2.1875rem;
+  }
+
+  .abonement-card.card-sky,
+  .abonement-card.card-blue {
+    margin-top: 0;
+  }
+
   .akcii {
     padding-top: 6.25rem;
     padding-bottom: 3.125rem;
@@ -3029,10 +3166,6 @@ MEDIAQUERIES
     right: -18%;
     width: 37.5rem;
     bottom: -3.125rem;
-  }
-
-  .banner-background {
-    background-position: 65% center;
   }
 
   .command {
@@ -3063,6 +3196,27 @@ MEDIAQUERIES
     font-size: 1.125rem;
   }
 
+  .btn {
+    font-size: 1.25rem;
+  }
+
+  .btn.btn-black {
+    font-size: 1.25rem;
+  }
+
+  .download {
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+  }
+
+  .download-block_title {
+    font-size: 2rem;
+  }
+
+  .download-block_picture {
+    right: -60px;
+  }
+
   .footer {
     margin-top: 4.6875rem;
     padding-top: 4.0625rem;
@@ -3083,6 +3237,11 @@ MEDIAQUERIES
     width: 100%;
   }
 
+  .gallery {
+    padding-top: 3.75rem;
+    padding-bottom: 4.6875rem;
+  }
+
   .gallery-block_title {
     font-size: 3rem;
   }
@@ -3096,8 +3255,53 @@ MEDIAQUERIES
     font-size: 1.125rem;
   }
 
+  .offers {
+    margin-bottom: 3.125rem;
+  }
+
+  .offers-block_col,
+  .offers-block_col p {
+    font-size: 1.125rem;
+  }
+
+  .offers-block_title {
+    font-size: 2.75rem;
+  }
+
+  .offers-block_text,
+  .offers-block_text p {
+    font-size: 1.125rem;
+  }
+
+  .offers-block_invitation {
+    font-size: 2rem;
+  }
+
+  .welcome {
+    padding-top: 3.75rem;
+    padding-bottom: 3.125rem;
+  }
+
+  .welcome-block_title {
+    font-size: 3rem;
+  }
+
+  .welcome-block_question {
+    font-size: 2.0625rem;
+  }
+
   .welcome-block_navigation {
     margin-left: 0rem;
+  }
+
+  .welcome-card_title h3 {
+    font-size: 1.375rem;
+  }
+
+  .welcome .swiper-button-next,
+  .welcome .swiper-button-prev {
+    width: 2.8125rem;
+    height: 2.8125rem;
   }
 }
 
@@ -3118,6 +3322,26 @@ MEDIAQUERIES
 }
 
 @media (max-width: 768px) {
+  .abonement-card {
+    min-height: 20rem;
+  }
+
+  .abonement-card_inner {
+    gap: 1.875rem;
+  }
+
+  .abonement-card_title {
+    font-size: 1.75rem;
+  }
+
+  .abonement-card_time {
+    font-size: 1.5rem;
+  }
+
+  .abonement-card_quantity {
+    font-size: 1.5rem;
+  }
+
   .akcii-block_picture {
     display: none;
   }
@@ -3139,14 +3363,118 @@ MEDIAQUERIES
     padding-right: var(--container-padding);
   }
 
+  .download-block_new {
+    display: none;
+  }
+
+  .download-block_picture {
+    display: none;
+  }
+
+  .download-block_picture-md {
+    right: -4.6875rem;
+    display: block;
+  }
+
   .footer-row {
     --bs-gutter-y: 2.25rem;
+  }
+
+  .offers-block {
+    padding: 0rem 0rem;
+    border: none;
+  }
+
+  .offers-block_row {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+  }
+
+  .offers-block .column-1 {
+    width: 100%;
+  }
+
+  .offers-block .column-2 {
+    width: 100%;
   }
 }
 
 @media (max-width: 576px) {
   .container {
     padding-inline: var(--container-padding);
+  }
+
+  .abonement {
+    padding-top: 2.8125rem;
+    padding-bottom: 5rem;
+  }
+
+  .abonement-block_title {
+    font-size: 1.75rem;
+    line-height: 120%;
+    color: var(--dark);
+    margin-bottom: 0rem;
+  }
+
+  .abonement-block_description {
+    font-size: 1.5rem;
+    line-height: 110%;
+    color: var(--brand-color);
+    margin-bottom: 0.9375rem;
+  }
+
+  .abonement-block_small {
+    display: none;
+  }
+
+  .abonement-card {
+    min-height: 15.625rem;
+    padding: 0.625rem;
+  }
+
+  .abonement-card_inner {
+    gap: 1.5625rem;
+  }
+
+  .abonement-card_title {
+    font-size: 1.5rem;
+  }
+
+  .abonement-card_time {
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+
+  .abonement-card_quantity {
+    font-size: 1.25rem;
+  }
+
+  .abonement-card_group {
+    gap: 0.625rem;
+  }
+
+  .abonement-card_price p {
+    font-size: 2.25rem;
+  }
+
+  .abonement-card_price small {
+    font-size: 0.875rem;
+  }
+
+  .abonement-card_logo {
+    top: 0.625rem;
+    left: 0.625rem;
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .abonement-card_logo svg {
+    -webkit-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    transform: translateY(-2px);
+    width: 2.3125rem !important;
+    height: 2.3125rem !important;
   }
 
   .akcii {
@@ -3263,6 +3591,53 @@ MEDIAQUERIES
     transform: translate(-62%, 35%);
   }
 
+  .banner {
+    min-height: initial;
+  }
+
+  .banner-background {
+    padding-top: 7.8125rem;
+    padding-bottom: 2.5rem;
+    min-height: initial;
+    background-image: url("../images/banner-bg-sm.png");
+    background-size: cover;
+    background-position: right top;
+  }
+
+  .banner-block_title {
+    max-width: 91%;
+    font-size: 1.75rem;
+    line-height: 150%;
+    margin-bottom: 1.25rem;
+  }
+
+  .banner-block_title span {
+    font-size: 1.5rem;
+    line-height: 110%;
+  }
+
+  .banner-block_title_button {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 0;
+  }
+
+  .banner-block_sm-hidden {
+    display: none;
+  }
+
+  .banner-block_text {
+    font-size: 1rem;
+    margin-bottom: 3.75rem;
+  }
+
+  .banner-block .btn {
+    width: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
   .command {
     padding-top: 2.5rem;
     margin-bottom: 5rem;
@@ -3322,6 +3697,64 @@ MEDIAQUERIES
   .command .swiper-button-next,
   .command .swiper-button-prev {
     display: none;
+  }
+
+  .btn {
+    font-size: 1rem;
+    line-height: 138%;
+    letter-spacing: -0.03em;
+    min-height: 3.25rem;
+    padding: 0rem 2.5rem;
+  }
+
+  .btn.btn-black {
+    font-size: 1rem;
+    line-height: 138%;
+    letter-spacing: -0.03em;
+    text-align: center;
+    min-height: 3.25rem;
+  }
+
+  .download {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+  }
+
+  .download-block {
+    padding-top: 2.5rem;
+    padding-bottom: 1.25rem;
+    min-height: 20.6875rem;
+    gap: 1.25rem;
+  }
+
+  .download-block_title {
+    font-size: 1.5rem;
+  }
+
+  .download-block_description {
+    font-size: 1.25rem;
+    line-height: 140%;
+    margin-bottom: 1.25rem;
+  }
+
+  .download-block_buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    gap: 1.25rem;
+  }
+
+  .download-block_picture-md {
+    right: -0.9375rem;
+  }
+
+  .download .btn-download {
+    aspect-ratio: 135/40;
+    max-width: 8.4375rem;
   }
 
   .footer {
@@ -3472,6 +3905,92 @@ MEDIAQUERIES
     height: 23.5625rem;
     -webkit-box-shadow: none;
     box-shadow: none;
+  }
+
+  .offers {
+    margin-bottom: 2.1875rem;
+  }
+
+  .offers-block_row {
+    gap: 1.5625rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .offers-block_col,
+  .offers-block_col p {
+    position: relative;
+    font-size: 1rem;
+    line-height: 140%;
+  }
+
+  .offers-block_col:before,
+  .offers-block_col p:before {
+    content: "";
+    position: absolute;
+    top: -0.3125rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 0.3125rem;
+    height: 0.3125rem;
+    border-radius: 50%;
+    background-color: var(--brand-color);
+  }
+
+  .offers-block_title {
+    font-size: 1.75rem;
+    line-height: 120%;
+    margin-bottom: 1.25rem;
+  }
+
+  .offers-block_text,
+  .offers-block_text p {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 140%;
+  }
+
+  .offers-block_text {
+    margin-bottom: 1.25rem;
+  }
+
+  .offers-block_invitation {
+    padding: 0.5rem 2rem;
+    font-size: 1.125rem;
+    line-height: 110%;
+    margin-bottom: 1.25rem;
+  }
+
+  .welcome {
+    margin-top: 2.1875rem;
+    padding-top: 0.9375rem;
+    padding-bottom: 2.1875rem;
+  }
+
+  .welcome-block_title {
+    display: none;
+  }
+
+  .welcome-block_question {
+    display: none;
+  }
+
+  .welcome-block_navigation {
+    display: none;
+  }
+
+  .welcome-card_title h3 {
+    font-size: 1.125rem;
+    color: var(--body-text);
+  }
+
+  .welcome-card_description {
+    letter-spacing: -0.01em;
+  }
+
+  .welcome .swiper {
+    margin-right: 1.75rem;
   }
 }
 

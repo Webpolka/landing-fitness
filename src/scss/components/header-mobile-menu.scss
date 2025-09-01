@@ -12,6 +12,8 @@ HEADER MOBILE MENU
 	background: #1d1d20;
 	transition: all 0.8s ease-in-out;
 
+	z-index: 9999;
+
 	&.active {
 		@media (max-width: 1100px) {
 			left: 0;

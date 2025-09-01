@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Главная</title>
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 	<link rel="stylesheet" href="vendor/bootstrap-grid.css">
 	<link rel="stylesheet" href="postcss/main.min.css">
@@ -14,53 +15,7 @@
 
 	<body>
 		<div class="site-overlay" id="site-overlay"></div>
-		<div class="wrapper">			
-			<header class="header">
-	<div class="container">
-		<div class="header_row">
-			<!-- Лого -->
-			<a href="index.html" class="header_logo">
-				<svg class="icon icon--logo-header">
-					<use href="./icons/symbol/sprite.svg#logo-header"></use>
-				</svg>
-			</a>
-
-			<!-- Меню -->
-			<nav class="header_nav">
-				<ul class="header_menu">
-					<li>
-						<span class="parent">Информация о клубе</span>
-						<ul class="header_submenu">
-							<li><a href="#">О клубе</a></li>
-							<li><a href="#">Абонементы</a></li>
-							<li><a href="#">Мобильное приложение</a></li>
-							<li><a href="#">Команда</a></li>
-						</ul>
-					</li>
-					<li><a href="shedules.html">Расписание групповых тренировок</a></li>
-				</ul>
-			</nav>
-
-			<!-- Телефон -->
-			<div class="header_phone">
-				<a href="tel:1234567890" class="btn">
-					<svg class="icon icon--phone">
-						<use href="./icons/symbol/sprite.svg#phone"></use>
-					</svg>
-					<span>8-3832-xxxxx</span>
-				</a>
-			</div>
-
-			<!-- Бургер -->
-			<div class="header_burger">
-				<button id="burger" class="burger">
-					<span></span>
-				</button>
-			</div>
-		</div>
-	</div>
-
-	<!-- МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ -->
+		<!-- МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ МОБИЛЬНОЕ МЕНЮ -->
 <div class="mobile-menu" id="mobile-menu">
 	<div class="mobile-menu_header">
 		<!-- Позвонить -->
@@ -82,10 +37,10 @@
 	<div class="mobile-menu_content">
 		<ul class="mobile-menu_list">
 			<li><a href="shedules.html">Расписание групповых тренировок</a></li>
-			<li><a href="#">О клубе</a></li>
-			<li><a href="#">Абонементы</a></li>
-			<li><a href="#">Мобильное приложение</a></li>
-			<li><a href="#">Команда</a></li>
+			<li><a href="index.html#about-club">О клубе</a></li>
+			<li><a href="index.html#abonement-club">Абонементы</a></li>
+			<li><a href="index.html#mobile-club">Мобильное приложение</a></li>
+			<li><a href="index.html#command-club">Команда</a></li>
 		</ul>
 
 		<div class="mobile-menu_footer">
@@ -141,7 +96,51 @@
 	</div>
 </div>
 
+		<div class="wrapper">			
+			<header class="header">
+	<div class="container">
+		<div class="header_row">
+			<!-- Лого -->
+			<a href="index.html" class="header_logo">
+				<svg class="icon icon--logo-header">
+					<use href="./icons/symbol/sprite.svg#logo-header"></use>
+				</svg>
+			</a>
 
+			<!-- Меню -->
+			<nav class="header_nav">
+				<ul class="header_menu">
+					<li>
+						<span class="parent">Информация о клубе</span>
+						<ul class="header_submenu">
+							<li><a href="index.html#about-club">О клубе</a></li>
+							<li><a href="index.html#abonement-club">Абонементы</a></li>
+							<li><a href="index.html#mobile-club">Мобильное приложение</a></li>
+							<li><a href="index.html#command-club">Команда</a></li>
+						</ul>
+					</li>
+					<li><a href="shedules.html">Расписание групповых тренировок</a></li>
+				</ul>
+			</nav>
+
+			<!-- Телефон -->
+			<div class="header_phone">
+				<a href="tel:1234567890" class="btn">
+					<svg class="icon icon--phone">
+						<use href="./icons/symbol/sprite.svg#phone"></use>
+					</svg>
+					<span>8-3832-xxxxx</span>
+				</a>
+			</div>
+
+			<!-- Бургер -->
+			<div class="header_burger">
+				<button id="burger" class="burger">
+					<span></span>
+				</button>
+			</div>
+		</div>
+	</div>
 </header>
 
 			<main class="main">
@@ -152,10 +151,7 @@
 			<div class="banner-block">
 				<!-- Заголовок -->
 				<h2 class="banner-block_title">
-					<span class="banner-block_title-small">
-						Больше 20 лет мы меняем жизнь <br>
-						к лучшему — теперь ещё <br>
-					</span>
+					<span class="banner-block_title-small">Больше 20 лет мы меняем <br>жизнь к лучшему — теперь ещё </span>
 					ярче <br>
 					мощнее <br>
 					и современнее!
@@ -163,10 +159,10 @@
 				<!-- Текст -->
 				<p class="banner-block_text">
 					Фитнес-клуб «FREESTYLE» приглашает всех желающих заняться спортом и 
-					вести активный образ жизни. Здесь созданы идеальные	условия для 
+					вести активный образ жизни. <span class="banner-block_sm-hidden">Здесь созданы идеальные	условия для 
 					достижения ваших целей в фитнесе и улучшения физической формы. Наш клуб 
 					предлагает широкий спектр программ и услуг, которые подойдут как новичкам, <br>
-					так и опытным спортсменам!
+					так и опытным спортсменам!</span>
 				</p>
 				<!-- Кнопка -->
 				<div class="banner-block_button">
@@ -177,7 +173,7 @@
 	</div>
 </section>
 
-				<section class="welcome">
+				<section class="welcome" id="about-club">
 	<h2 class="visually-hidden">Добро пожаловать в наш легендарный фитнес-клуб</h2>
 	<div class="container">
 		<div class="welcome-block">
@@ -329,7 +325,7 @@
 	</div>
 </section>
 
-				<section class="abonement">
+				<section class="abonement" id="abonement-club">
 	<h2 class="visually-hidden">Стоимость абонементов в нашем фитнес-клубе</h2>
 	<div class="container">
 		<div class="abonement-block">
@@ -339,9 +335,12 @@
 				Мы предлагаем различные варианты абонементов, чтобы каждый мог выбрать подходящий по цене и продолжительности. В таблице
 				ниже вы найдете актуальные цены на июнь 2025 года.
 			</div>
-			<div class="row g-20">
+
+			<!-- <div class="row g-20"-->
+			<div class="keen-slider" id="abonement-slider">
 				<!-- 1 -->
-				<div class="col-lg-3 col-md-6">
+				<!-- <div class="col-lg-6 col-xl-3"> -->
+				<div class="keen-slider__slide">
 					<div class="abonement-card card-brand">
 						<div class="abonement-card_logo">
 							<svg class="icon icon--card-logo">
@@ -356,7 +355,7 @@
 							</div>
 							<div class="abonement-card_price">
 								<p>3000₽</p>
-                                <small class="price-dolly">---</small>
+								<small class="price-dolly">---</small>
 							</div>
 						</div>
 						<div class="abonement-card_arrow">
@@ -368,7 +367,8 @@
 				</div>
 
 				<!-- 2 -->
-				<div class="col-lg-3 col-md-6">
+				<!-- <div class="col-lg-6 col-xl-3"> -->
+				<div class="keen-slider__slide">
 					<div class="abonement-card card-sky">
 						<div class="abonement-card_logo">
 							<svg class="icon icon--card-logo">
@@ -383,7 +383,7 @@
 							</div>
 							<div class="abonement-card_price">
 								<p>3900₽</p>
-                                <small class="price-dolly">---</small>
+								<small class="price-dolly">---</small>
 							</div>
 						</div>
 						<div class="abonement-card_arrow">
@@ -395,7 +395,8 @@
 				</div>
 
 				<!-- 3 -->
-				<div class="col-lg-3 col-md-6">
+				<!-- <div class="col-lg-6 col-xl-3"> -->
+				<div class="keen-slider__slide">
 					<div class="abonement-card card-green">
 						<div class="abonement-card_logo">
 							<svg class="icon icon--card-logo">
@@ -422,7 +423,8 @@
 				</div>
 
 				<!-- 4 -->
-				<div class="col-lg-3 col-md-6">
+				<!-- <div class="col-lg-6 col-xl-3"> -->
+				<div class="keen-slider__slide">
 					<div class="abonement-card card-blue">
 						<div class="abonement-card_logo">
 							<svg class="icon icon--card-logo">
@@ -458,10 +460,10 @@
 		<div class="offers-block">
 			<div class="offers-block_title">Наши предложения</div>
 			<div class="offers-block_row">
-				<div class="offers-block_col">
+				<div class="offers-block_col column-1">
 					<p>Дата активации абонемента: при первом посещении клуба. Покупай сейчас — активируй при первом посещении!</p>
 				</div>
-				<div class="offers-block_col">
+				<div class="offers-block_col column-2">
 					<p>
 						Бесплатное посещение групповых тренировок: Все наши абонементы включают бесплатное посещение групповых занятий,
 						таких как йога, пилатес, танцы и другие.
@@ -485,7 +487,7 @@
 	</div>
 </section>
 
-				<section class="download">
+				<section class="download" id="mobile-club">
 	<h2 class="visually-hidden">Скачайте приложение прямо сейчас! Fitnessclub дляiPhone и Android</h2>
 	<div class="container">
 		<div class="download-block">
@@ -510,6 +512,10 @@
 
 			<div class="download-block_picture">
 				<img class="img-responsive" src="./images/phones.png" alt="Phones image">
+			</div>
+
+			<div class="download-block_picture-md">
+				<img class="img-responsive" src="./images/phones2.png" alt="Phones image">
 			</div>
 		</div>
 	</div>
@@ -652,7 +658,7 @@
 	</div>
 </section>
 
-				<section class="command">
+				<section class="command" id="command-club">
 	<h2 class="visually-hidden">Наша команда тренеров и профессионалов</h2>
 	<div class="container">
 		<div class="command_row">
@@ -817,9 +823,9 @@
 			<!-- 2 -->
 			<div class="col-lg-3 col-sm-6 footer-item-2">
 				<ul class="footer-list">
-					<li><a href="#">Абонементы стоимость</a></li>
+					<li><a href="index.html#abonement-club">Абонементы стоимость</a></li>
 					<li><a href="#">Рассрочка/долями</a></li>
-					<li><a href="#">О КЛУБЕ</a></li>
+					<li><a href="index.html#about-club">О КЛУБЕ</a></li>
 					<li><a href="#">Лицензия и документы</a></li>
 					<li><a href="#">Вопросы и ответы</a></li>
 				</ul>
@@ -871,6 +877,7 @@
 
 		</div>
 		
+<script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="./js/main.min.js"></script>
 

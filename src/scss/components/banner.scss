@@ -5,12 +5,20 @@ BANNER
 	background-color: #060606;
 	min-height: rem(1080);
 
+	@include xl {
+		min-height: rem(750);
+	}
+
+	@include sm {
+		min-height: initial;
+	}
+
 	&-background {
 		min-height: rem(1080);
 		max-width: rem(1920);
 
 		padding-top: rem(240);
-        padding-bottom: rem(90);
+		padding-bottom: rem(90);
 
 		background-image: url("../../images/banner-bg.png");
 		background-repeat: no-repeat;
@@ -19,15 +27,33 @@ BANNER
 
 		margin-inline: auto;
 
-        overflow: hidden;
+		overflow: hidden;
 
-		@include lg{
+		@include xl {
+			padding-top: rem(140);
+			padding-bottom: rem(60);
+
+			min-height: rem(750);
 			background-position: 65% center;
+		}
+
+		@include sm {
+			padding-top: rem(125);
+			padding-bottom: rem(40);
+
+			min-height: initial;
+
+			background-image: url("../../images/banner-bg-sm.png");
+			background-size: cover;
+			background-position: right top;
 		}
 	}
 
 	&-block {
+		position: relative;
+
 		&_title {
+			font-family: var(--font-title);
 			font-weight: 700;
 			font-size: rem(72);
 			line-height: 130%;
@@ -35,30 +61,82 @@ BANNER
 			text-transform: uppercase;
 			color: var(--brand-color);
 
-            margin-bottom: rem(25);
+			margin-bottom: rem(25);
+
+			@include xl {
+				font-size: rem(48);
+			}
+
+			@include sm {
+				max-width: 91%;
+				font-size: rem(28);
+				line-height: 150%;
+
+				margin-bottom: rem(20);
+			}
 			span {
 				font-weight: 700;
 				font-size: rem(50);
 				line-height: 120%;
 				letter-spacing: -0.01em;
 				color: var(--white);
-                text-transform: none;
+				text-transform: none;
 
-                display: block;
-                margin-bottom: rem(10);
+				display: block;
+				margin-bottom: rem(10);
+
+				@include xl {
+					font-size: rem(36);
+				}
+
+				@include sm {
+					font-size: rem(24);
+					line-height: 110%;
+				}
+			}
+
+			&_button {
+				@include sm {
+					position: absolute;
+					bottom: rem(40);
+					left: 0;
+				}
 			}
 		}
 
-		&_text {			
+		&_sm-hidden {
+			@include sm {
+				display: none;
+			}
+		}
+
+		&_text {
 			font-weight: 400;
 			font-size: rem(20);
 			line-height: 140%;
 			letter-spacing: -0.01em;
 			color: var(--white);
 
-            width: 70%;
+			width: 70%;
 
-            margin-bottom: rem(100);
+			margin-bottom: rem(100);
+
+			@include xl {
+				font-size: rem(18);
+			}
+
+			@include sm {
+				font-size: rem(16);
+
+				margin-bottom: rem(60);
+			}
+		}
+
+		.btn {
+			@include sm {
+				width: 100%;
+				justify-content: center;
+			}
 		}
 	}
 }

@@ -6,6 +6,11 @@ GALLERY BLOCK
 	padding-bottom: rem(125);
 	background-color: var(--surface-color);
 
+	@include lg {
+		padding-top: rem(60);
+		padding-bottom: rem(75);
+	}
+
 	@include sm {
 		padding-top: rem(35);
 		padding-bottom: rem(40);
@@ -45,7 +50,7 @@ GALLERY BLOCK
 				border-radius: rem(5);
 				overflow: hidden;
 			}
-			@include sm{
+			@include sm {
 				border-radius: 0;
 			}
 		}
@@ -76,7 +81,7 @@ GALLERY BLOCK
 
 		&_text {
 			@include sm {
-				display: none;		
+				display: none;
 			}
 			ul {
 				padding-block: rem(8);

@@ -5,6 +5,16 @@ DOWNLOAD BLOCK
 	padding-top: rem(100);
 	padding-bottom: rem(100);
 
+	@include lg {
+		padding-top: rem(50);
+		padding-bottom: rem(50);
+	}
+
+	@include sm {
+		padding-top: rem(0);
+		padding-bottom: rem(0);
+	}
+
 	&-block {
 		position: relative;
 		min-height: rem(326);
@@ -18,7 +28,15 @@ DOWNLOAD BLOCK
 
 		display: flex;
 		flex-direction: column;
-        gap: rem(40);
+		gap: rem(40);
+
+		@include sm {
+			padding-top: rem(40);
+			padding-bottom: rem(20);
+
+			min-height: rem(331);
+			gap: rem(20);
+		}
 
 		&:before {
 			position: absolute;
@@ -40,12 +58,20 @@ DOWNLOAD BLOCK
 		}
 
 		&_title {
-            font-family: var(--font-title);
+			font-family: var(--font-title);
 			font-weight: 700;
 			font-size: rem(40);
 			line-height: 110%;
 			letter-spacing: -0.01em;
 			color: var(--white);
+
+			@include lg {
+				font-size: rem(32);
+			}
+
+			@include sm {
+				font-size: rem(24);
+			}
 		}
 
 		&_description {
@@ -58,6 +84,13 @@ DOWNLOAD BLOCK
 			line-height: 119%;
 			letter-spacing: -0.01em;
 			color: var(--white);
+
+			@include sm {
+				font-size: rem(20);
+				line-height: 140%;
+
+				margin-bottom: rem(20);
+			}
 		}
 		&_new {
 			position: absolute;
@@ -79,11 +112,21 @@ DOWNLOAD BLOCK
 			letter-spacing: 0.11em;
 			text-transform: uppercase;
 			color: var(--brand-color);
+
+			@include md {
+				display: none;
+			}
 		}
 		&_buttons {
 			display: inline-flex;
 			align-items: center;
 			gap: rem(15);
+
+			@include sm {
+				flex-direction: column;
+				align-items: start;
+				gap: rem(20);
+			}
 		}
 
 		&_picture {
@@ -92,19 +135,60 @@ DOWNLOAD BLOCK
 			right: 0;
 			max-width: rem(400);
 			aspect-ratio: 400/354;
+
+			@media (max-width: 1300px) {
+				max-width: rem(300);
+			}
+
+			@include xl {
+				z-index: 1;
+				max-width: rem(260);
+			}
+
+			@include lg {
+				right: -60px;
+			}
+
+			@include md {
+				display: none;
+			}
+		}
+
+		&_picture-md {
+			position: absolute;
+			bottom: 0;
+			max-width: rem(126);
+			aspect-ratio: 137/245;
+			display: none;
+
+			z-index: 1;
+
+			@include md {
+				right: rem(-75);
+				display: block;
+			}
+
+			@include sm {
+				right: rem(-15);
+			}
 		}
 	}
 
 	.btn-download {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-        overflow: hidden;       
+		overflow: hidden;
 
-        aspect-ratio: 162/48;
+		aspect-ratio: 162/48;
 		max-width: rem(162);
-        
+
+		@include sm {
+			aspect-ratio: 135/40;
+			max-width: rem(135);
+		}
+
 		svg {
 			width: 100%;
 			transition: all 0.3s ease-in-out;

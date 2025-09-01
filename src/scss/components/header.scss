@@ -70,6 +70,10 @@ HEADER
 			align-items: center;
 			gap: rem(45);
 
+			@include xl{
+				gap: rem(35);
+			}
+
 			& > li {
 				position: relative;
 				& > span,
@@ -79,6 +83,10 @@ HEADER
 					color: var(--white);
 
 					transition: all 0.3s ease-in-out 0.3s;
+
+					@include xl{
+						font-size: rem(16);
+					}
 				}
 
 				& > span,

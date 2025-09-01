@@ -23,10 +23,36 @@ COMPONENTS
 		background: #ba5434;
 	}
 
+	@include lg{
+		font-size: rem(20);
+	}
+
+	@include sm {
+		font-size: rem(16);
+		line-height: 138%;
+		letter-spacing: -0.03em;
+
+		min-height: rem(52);		
+		padding: rem(0) rem(40);
+	}
+
 	&.btn-black {
 		background: var(--dark);
 		&:hover {
 			background: var(--body-text);
+		}
+
+		@include lg {
+			font-size: rem(20);
+		}
+
+		@include sm {
+			font-size: rem(16);
+			line-height: 138%;
+			letter-spacing: -0.03em;
+			text-align: center;
+
+			min-height: rem(52);
 		}
 	}
 }
