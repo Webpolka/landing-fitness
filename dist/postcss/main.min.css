@@ -397,6 +397,25 @@ ABONEMENT BLOCK
   padding-bottom: 5rem;
 }
 
+.abonement .keen-slider {
+  overflow: initial;
+  position: relative;
+}
+
+.abonement .keen-slider:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  height: 100%;
+  width: 120vh;
+  background: var(--white);
+  z-index: 2;
+}
+
 .abonement-block_title {
   font-family: var(--font-title);
   font-weight: 700;

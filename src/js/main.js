@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			},
 			breakpoints: {
 				"(max-width: 660px)": {
-					slides: { perView: 1.6, spacing: 18 },
+					slides: { perView: 1.54, spacing: 18 },
 				},
 			},
 		});
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		},
 		breakpoints: {
 			"(max-width: 660px)": {
-				slides: { perView: 1.6, spacing: 18 },
+				slides: { perView: 1.54, spacing: 18 },
 			},
 		},
 	});
