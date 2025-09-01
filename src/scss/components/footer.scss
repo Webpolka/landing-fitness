@@ -1,18 +1,28 @@
 /* ------------------------------------------------------------------------------------------------------------------------------
 FOOTER
 --------------------------------------------------------------------------------------------------------------------------------*/
+#main-page .footer {
+	@include sm {
+		margin-top: rem(40) !important;
+	}
+}
+#shedules-page .footer {
+	@include sm {
+		margin-top: rem(60) !important;
+	}
+}
 .footer {
 	margin-top: rem(100);
 
 	background: var(--dark);
 	padding-top: rem(100);
 
-	@include lg{
+	@include lg {
 		margin-top: rem(75);
 		padding-top: rem(65);
 	}
 
-	@include sm{
+	@include sm {
 		margin-top: rem(40);
 		padding-top: rem(35);
 	}
@@ -42,7 +52,7 @@ FOOTER
 			--bs-gutter-y: 2.25rem;
 		}
 
-		@include sm{
+		@include sm {
 			margin-bottom: rem(32);
 		}
 	}
@@ -184,7 +194,7 @@ FOOTER
 				height: rem(24);
 
 				transition: all 0.3s ease-in-out;
-				&:hover{
+				&:hover {
 					stroke: var(--brand-color);
 				}
 			}
@@ -213,7 +223,7 @@ FOOTER
 			padding-top: rem(30);
 			padding-bottom: rem(60);
 
-			@include sm{
+			@include sm {
 				padding-bottom: rem(20);
 			}
 
@@ -273,7 +283,7 @@ FOOTER
 			line-height: 160%;
 		}
 
-		@include sm {			
+		@include sm {
 			gap: rem(20);
 			text-align: center;
 		}

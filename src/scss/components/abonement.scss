@@ -33,6 +33,7 @@ ABONEMENT BLOCK
 	}
 
 	&-block {
+		user-select: none;
 		&_title {
 			font-family: var(--font-title);
 			font-weight: 700;
@@ -43,7 +44,7 @@ ABONEMENT BLOCK
 			text-align: center;
 			color: var(--body-text);
 
-			margin-bottom: rem(20);
+			margin-bottom: rem(20);			
 
 			@include lg {
 				font-size: rem(48);

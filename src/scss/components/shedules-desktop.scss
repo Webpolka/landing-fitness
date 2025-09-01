@@ -8,6 +8,23 @@ SHEDULS DESKTOP
 
 	background-color: var(--dark);
 
+	@media (max-width: 1100px) {
+		padding-top: rem(130);
+		padding-bottom: rem(70);
+	}
+
+	@include md {
+		padding-top: rem(140);
+		padding-bottom: rem(50);
+
+		background-color: var(--surface-color);
+	}
+
+	@include sm {
+		padding-top: rem(90);
+		padding-bottom: rem(40);
+	}
+
 	&_title {
 		text-align: center;
 		font-family: var(--font-title);
@@ -18,9 +35,29 @@ SHEDULS DESKTOP
 		color: var(--white);
 
 		margin-bottom: rem(25);
+
+		@media (max-width: 1100px) {
+			font-size: rem(33);
+		}
+
+		@include md {
+			position: absolute !important;
+			width: 1px !important;
+			height: 1px !important;
+			padding: 0 !important;
+			margin: -1px !important;
+			overflow: hidden !important;
+			clip: rect(0, 0, 0, 0);
+			white-space: nowrap !important;
+			border: 0 !important;
+		}
 	}
 
 	&-desktop {
+		@include md {
+			display: none;
+		}
+
 		display: flex;
 		flex-direction: column;
 
@@ -29,6 +66,10 @@ SHEDULS DESKTOP
 			display: flex;
 			justify-content: center;
 			margin-left: rem(100);
+			@media (max-width: 1100px) {
+				margin-left: rem(70);
+			}
+
 			div {
 				flex: 1;
 				font-family: var(--font-title);
@@ -41,6 +82,11 @@ SHEDULS DESKTOP
 				color: var(--brand-color);
 
 				padding-block: rem(30);
+
+				@media (max-width: 1100px) {
+					padding-block: rem(20);
+					font-size: rem(15);
+				}
 			}
 		}
 
@@ -51,6 +97,12 @@ SHEDULS DESKTOP
 			gap: rem(10);
 
 			margin-bottom: rem(10);
+
+			@media (max-width: 1100px) {
+				gap: rem(7);
+
+				margin-bottom: rem(7);
+			}
 		}
 
 		.time {
@@ -69,6 +121,11 @@ SHEDULS DESKTOP
 			letter-spacing: -0.01em;
 			color: var(--brand-color);
 			text-align: center;
+
+			@media (max-width: 1100px) {
+				width: rem(60);
+				font-size: rem(18);
+			}
 		}
 
 		/* Ячейки расписания */
@@ -95,42 +152,80 @@ SHEDULS DESKTOP
 				right: 0;
 				top: 0;
 				height: 100%;
-				width: 4px;				
+				width: 4px;
 			}
-
-			&.lesson-yoga:after {
-				background-color: var(--fitness-yoga);
-			}
-			&.lesson-streching:after {
-				background-color: var(--streching);
-			}
-			&.lesson-funct:after {
-				background-color: var(--functional-training);
+			&.lesson-tabata:after {
+				background-color: var(--brand-color);
 			}
 			&.lesson-pilates:after {
 				background-color: var(--pilates);
 			}
-			&.lesson-health-back:after {
-				background-color: var(--health-back);
+			&.lesson-funct:after {
+				background-color: var(--functional-training);
+			}
+			&.lesson-hot:after {
+				background-color: var(--hot-body);
 			}
 			&.lesson-cardio:after {
 				background-color: var(--cardio-attack);
+			}
+			&.lesson-pandp:after {
+				background-color: var(--pandp);
+			}
+			&.lesson-steppro:after {
+				background-color: var(--step-pro);
+			}
+			&.lesson-streching:after {
+				background-color: var(--streching);
+			}
+			&.lesson-monstr:after {
+				background-color: var(--monstr);
+			}
+			&.lesson-power:after {
+				background-color: var(--power);
+			}
+			&.lesson-health-back:after {
+				background-color: var(--health-back);
+			}
+			&.lesson-yoga:after {
+				background-color: var(--fitness-yoga);
 			}
 
 			&-name {
 				font-weight: 400;
 				font-size: rem(16);
-				line-height: 140%;
+				// line-height: 140%;
+				line-height: 100%;
 				letter-spacing: -0.02em;
 				color: var(--grey);
+				@media (max-width: 1300px) {
+					font-size: rem(14);					
+				}
+				@media (max-width: 1100px) {
+					font-size: rem(13);					
+				}
+				@media (max-width: 850px) {
+					font-size: rem(12);					
+				}
 			}
 			&-type {
 				font-weight: 700;
 				font-size: rem(14);
-				line-height: 140%;
+				// line-height: 140%;
+				line-height: 110%;
 				letter-spacing: -0.02em;
 				text-transform: uppercase;
 				color: var(--body-text);
+
+				@media (max-width: 1300px) {
+					font-size: rem(12);					
+				}
+				@media (max-width: 1100px) {
+					font-size: rem(10);					
+				}
+				@media (max-width: 850px) {
+					font-size: rem(9);					
+				}
 			}
 		}
 	}

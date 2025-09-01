@@ -5,22 +5,71 @@ SHEDULES LIST DESKTOP
 	margin-bottom: rem(100);
 	border-bottom: 1px solid var(--brand-color);
 
+	@include md {
+		background-color: var(--surface-color);
+		border-bottom: none;
+	}
+
+	@include sm {
+		margin-bottom: rem(40);
+		
+	}
+
+	.keen-slider__slide {
+		height: inherit;
+	}
+
 	&_block {
 		padding-top: rem(100);
 		padding-bottom: rem(100);
+		@include lg {
+			padding-top: rem(60);
+			padding-bottom: rem(50);
+		}
+
+		@include md {
+			padding-top: rem(40);			
+		}
+		@include sm{
+			padding-bottom: rem(40);
+		}
 	}
 
 	&_item {
-        margin-bottom: rem(40);
+		margin-bottom: rem(40);
+		height: 100%;
+
+		@include md {
+			padding: rem(18) rem(22);
+			margin-bottom: 0;
+			background: var(--white);
+		}
+
+		@include sm {
+			padding: rem(12) rem(15);
+		}
 
 		.item-title {
 			position: relative;
-			height: inherit;
+			height: initial;
 
 			min-height: rem(60);
 			padding-left: rem(12);
 
-            margin-bottom: rem(10);
+			margin-bottom: rem(10);
+			@include xl {
+				font-size: rem(29);
+				min-height: rem(40);
+			}
+
+			@include sm {
+				min-height: initial;
+				font-weight: 700;
+				font-size: rem(24);
+				line-height: 110%;
+				letter-spacing: -0.01em;
+				color: var(--body-text);
+			}
 
 			&:after {
 				position: absolute;
@@ -73,12 +122,32 @@ SHEDULES LIST DESKTOP
 			position: relative;
 			display: block;
 			padding-left: rem(30);
-			
+
 			font-weight: 400;
 			font-size: rem(20);
 			line-height: 140%;
 			letter-spacing: -0.01em;
 			color: var(--dark);
+			@include xl {
+				font-size: rem(18);
+			}
+
+			@include lg {
+				font-size: rem(16);
+				padding-left: 0;
+
+				&:after{
+					content: none !important;
+				}
+			}
+
+			@include sm {
+				font-weight: 400;
+				font-size: rem(16);
+				line-height: 140%;
+				letter-spacing: -0.01em;
+				color: var(--grey);
+			}
 
 			&:after {
 				position: absolute;

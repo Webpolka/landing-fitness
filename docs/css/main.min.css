@@ -377,6 +377,9 @@ ABONEMENT BLOCK
   background: var(--white);
   z-index: 2;
 }
+.abonement-block {
+  user-select: none;
+}
 .abonement-block_title {
   font-family: var(--font-title);
   font-weight: 700;
@@ -1052,7 +1055,7 @@ BANNER
   max-width: 120rem;
   padding-top: 15rem;
   padding-bottom: 5.625rem;
-  background-image: url("../images/banner-bg.png");
+  background-image: url("../images/webp/banner-bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -1072,7 +1075,7 @@ BANNER
     padding-top: 7.8125rem;
     padding-bottom: 2.5rem;
     min-height: initial;
-    background-image: url("../images/banner-bg-sm.png");
+    background-image: url("../images/webp/banner-bg-sm.webp");
     background-size: cover;
     background-position: right top;
   }
@@ -1786,6 +1789,18 @@ DOWNLOAD BLOCK
 /* ------------------------------------------------------------------------------------------------------------------------------
 FOOTER
 --------------------------------------------------------------------------------------------------------------------------------*/
+@media (max-width: 576px) {
+  #main-page .footer {
+    margin-top: 2.5rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #shedules-page .footer {
+    margin-top: 3.75rem !important;
+  }
+}
+
 .footer {
   margin-top: 6.25rem;
   background: var(--dark);
@@ -2756,6 +2771,25 @@ SHEDULS DESKTOP
   padding-bottom: 6.25rem;
   background-color: var(--dark);
 }
+@media (max-width: 1100px) {
+  .shedules {
+    padding-top: 8.125rem;
+    padding-bottom: 4.375rem;
+  }
+}
+@media (max-width: 768px) {
+  .shedules {
+    padding-top: 8.75rem;
+    padding-bottom: 3.125rem;
+    background-color: var(--surface-color);
+  }
+}
+@media (max-width: 576px) {
+  .shedules {
+    padding-top: 5.625rem;
+    padding-bottom: 2.5rem;
+  }
+}
 .shedules_title {
   text-align: center;
   font-family: var(--font-title);
@@ -2766,6 +2800,24 @@ SHEDULS DESKTOP
   color: var(--white);
   margin-bottom: 1.5625rem;
 }
+@media (max-width: 1100px) {
+  .shedules_title {
+    font-size: 2.0625rem;
+  }
+}
+@media (max-width: 768px) {
+  .shedules_title {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+}
 .shedules-desktop {
   display: flex;
   flex-direction: column;
@@ -2774,10 +2826,20 @@ SHEDULS DESKTOP
   /* Ячейки расписания */
   /* Цветные блоки внутри ячеек */
 }
+@media (max-width: 768px) {
+  .shedules-desktop {
+    display: none;
+  }
+}
 .shedules-desktop_header {
   display: flex;
   justify-content: center;
   margin-left: 6.25rem;
+}
+@media (max-width: 1100px) {
+  .shedules-desktop_header {
+    margin-left: 4.375rem;
+  }
 }
 .shedules-desktop_header div {
   flex: 1;
@@ -2791,11 +2853,23 @@ SHEDULS DESKTOP
   color: var(--brand-color);
   padding-block: 1.875rem;
 }
+@media (max-width: 1100px) {
+  .shedules-desktop_header div {
+    padding-block: 1.25rem;
+    font-size: 0.9375rem;
+  }
+}
 .shedules-desktop_time-row {
   display: flex;
   align-items: center;
   gap: 0.625rem;
   margin-bottom: 0.625rem;
+}
+@media (max-width: 1100px) {
+  .shedules-desktop_time-row {
+    gap: 0.4375rem;
+    margin-bottom: 0.4375rem;
+  }
 }
 .shedules-desktop .time {
   display: flex;
@@ -2811,6 +2885,12 @@ SHEDULS DESKTOP
   letter-spacing: -0.01em;
   color: var(--brand-color);
   text-align: center;
+}
+@media (max-width: 1100px) {
+  .shedules-desktop .time {
+    width: 3.75rem;
+    font-size: 1.125rem;
+  }
 }
 .shedules-desktop .cell {
   flex: 1;
@@ -2835,38 +2915,268 @@ SHEDULS DESKTOP
   height: 100%;
   width: 4px;
 }
-.shedules-desktop .lesson.lesson-yoga:after {
-  background-color: var(--fitness-yoga);
-}
-.shedules-desktop .lesson.lesson-streching:after {
-  background-color: var(--streching);
-}
-.shedules-desktop .lesson.lesson-funct:after {
-  background-color: var(--functional-training);
+.shedules-desktop .lesson.lesson-tabata:after {
+  background-color: var(--brand-color);
 }
 .shedules-desktop .lesson.lesson-pilates:after {
   background-color: var(--pilates);
 }
-.shedules-desktop .lesson.lesson-health-back:after {
-  background-color: var(--health-back);
+.shedules-desktop .lesson.lesson-funct:after {
+  background-color: var(--functional-training);
+}
+.shedules-desktop .lesson.lesson-hot:after {
+  background-color: var(--hot-body);
 }
 .shedules-desktop .lesson.lesson-cardio:after {
   background-color: var(--cardio-attack);
 }
+.shedules-desktop .lesson.lesson-pandp:after {
+  background-color: var(--pandp);
+}
+.shedules-desktop .lesson.lesson-steppro:after {
+  background-color: var(--step-pro);
+}
+.shedules-desktop .lesson.lesson-streching:after {
+  background-color: var(--streching);
+}
+.shedules-desktop .lesson.lesson-monstr:after {
+  background-color: var(--monstr);
+}
+.shedules-desktop .lesson.lesson-power:after {
+  background-color: var(--power);
+}
+.shedules-desktop .lesson.lesson-health-back:after {
+  background-color: var(--health-back);
+}
+.shedules-desktop .lesson.lesson-yoga:after {
+  background-color: var(--fitness-yoga);
+}
 .shedules-desktop .lesson-name {
   font-weight: 400;
   font-size: 1rem;
-  line-height: 140%;
+  line-height: 100%;
   letter-spacing: -0.02em;
   color: var(--grey);
+}
+@media (max-width: 1300px) {
+  .shedules-desktop .lesson-name {
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 1100px) {
+  .shedules-desktop .lesson-name {
+    font-size: 0.8125rem;
+  }
+}
+@media (max-width: 850px) {
+  .shedules-desktop .lesson-name {
+    font-size: 0.75rem;
+  }
 }
 .shedules-desktop .lesson-type {
   font-weight: 700;
   font-size: 0.875rem;
-  line-height: 140%;
+  line-height: 110%;
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: var(--body-text);
+}
+@media (max-width: 1300px) {
+  .shedules-desktop .lesson-type {
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 1100px) {
+  .shedules-desktop .lesson-type {
+    font-size: 0.625rem;
+  }
+}
+@media (max-width: 850px) {
+  .shedules-desktop .lesson-type {
+    font-size: 0.5625rem;
+  }
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------
+SHEDULS MOBILE
+--------------------------------------------------------------------------------------------------------------------------------*/
+.shedules-mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .shedules-mobile {
+    display: block;
+  }
+}
+.shedules-mobile_tabs {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4375rem;
+  margin-bottom: 1.875rem;
+}
+.shedules-mobile_tabs .tab-btn {
+  border-radius: 6.25rem;
+  min-width: 2.5625rem;
+  min-height: 3.625rem;
+  background-color: var(--white);
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 133%;
+  letter-spacing: -0.02em;
+  color: var(--body-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.shedules-mobile_tabs .tab-btn.active {
+  background: var(--brand-color) !important;
+  color: var(--white);
+}
+.shedules-mobile_tabs .tab-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.shedules-mobile_list {
+  display: none;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.shedules-mobile_list.active {
+  display: flex;
+  animation: fade-up 0.3s ease-in-out;
+}
+.shedules-mobile_item {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 4px;
+  padding: 0.375rem 0.625rem;
+  max-width: 37.5rem;
+  min-height: 3.75rem;
+  background: var(--white);
+  overflow: hidden;
+  /* Цветные блоки внутри ячеек */
+}
+.shedules-mobile_item .item-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.shedules-mobile_item .item-left_time {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.shedules-mobile_item .item-left_time span {
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 140%;
+  letter-spacing: -0.02em;
+  color: var(--grey);
+}
+.shedules-mobile_item .item-right_name {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 140%;
+  letter-spacing: -0.02em;
+  color: var(--body-text);
+  padding-top: 0.3125rem;
+  padding-right: 0.3125rem;
+}
+.shedules-mobile_item.lesson {
+  position: relative;
+}
+.shedules-mobile_item.lesson:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+}
+.shedules-mobile_item.lesson .shedules-slider-btn {
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 140%;
+  letter-spacing: -0.02em;
+  transition: all 0.3s ease-in-out;
+}
+.shedules-mobile_item.lesson .shedules-slider-btn:hover {
+  margin-left: 0.625rem;
+  transform: scale(1.1);
+}
+.shedules-mobile_item.lesson.lesson-tabata .shedules-slider-btn {
+  color: var(--brand-color);
+}
+.shedules-mobile_item.lesson.lesson-tabata:after {
+  background-color: var(--brand-color);
+}
+.shedules-mobile_item.lesson.lesson-pilates .shedules-slider-btn {
+  color: var(--pilates);
+}
+.shedules-mobile_item.lesson.lesson-pilates:after {
+  background-color: var(--pilates);
+}
+.shedules-mobile_item.lesson.lesson-funct .shedules-slider-btn {
+  color: var(--functional-training);
+}
+.shedules-mobile_item.lesson.lesson-funct:after {
+  background-color: var(--functional-training);
+}
+.shedules-mobile_item.lesson.lesson-hot .shedules-slider-btn {
+  color: var(--hot-body);
+}
+.shedules-mobile_item.lesson.lesson-hot:after {
+  background-color: var(--hot-body);
+}
+.shedules-mobile_item.lesson.lesson-cardio .shedules-slider-btn {
+  color: var(--cardio-attack);
+}
+.shedules-mobile_item.lesson.lesson-cardio:after {
+  background-color: var(--cardio-attack);
+}
+.shedules-mobile_item.lesson.lesson-pandp .shedules-slider-btn {
+  color: var(--pandp);
+}
+.shedules-mobile_item.lesson.lesson-pandp:after {
+  background-color: var(--pandp);
+}
+.shedules-mobile_item.lesson.lesson-steppro .shedules-slider-btn {
+  color: var(--step-pro);
+}
+.shedules-mobile_item.lesson.lesson-steppro:after {
+  background-color: var(--step-pro);
+}
+.shedules-mobile_item.lesson.lesson-streching .shedules-slider-btn {
+  color: var(--streching);
+}
+.shedules-mobile_item.lesson.lesson-streching:after {
+  background-color: var(--streching);
+}
+.shedules-mobile_item.lesson.lesson-monstr .shedules-slider-btn {
+  color: var(--monstr);
+}
+.shedules-mobile_item.lesson.lesson-monstr:after {
+  background-color: var(--monstr);
+}
+.shedules-mobile_item.lesson.lesson-power .shedules-slider-btn {
+  color: var(--power);
+}
+.shedules-mobile_item.lesson.lesson-power:after {
+  background-color: var(--power);
+}
+.shedules-mobile_item.lesson.lesson-health-back .shedules-slider-btn {
+  color: var(--health-back);
+}
+.shedules-mobile_item.lesson.lesson-health-back:after {
+  background-color: var(--health-back);
+}
+.shedules-mobile_item.lesson.lesson-yoga .shedules-slider-btn {
+  color: var(--fitness-yoga);
+}
+.shedules-mobile_item.lesson.lesson-yoga:after {
+  background-color: var(--fitness-yoga);
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------
@@ -2876,19 +3186,78 @@ SHEDULES LIST DESKTOP
   margin-bottom: 6.25rem;
   border-bottom: 1px solid var(--brand-color);
 }
+@media (max-width: 768px) {
+  .shedules-list {
+    background-color: var(--surface-color);
+    border-bottom: none;
+  }
+}
+@media (max-width: 576px) {
+  .shedules-list {
+    margin-bottom: 2.5rem;
+  }
+}
+.shedules-list .keen-slider__slide {
+  height: inherit;
+}
 .shedules-list_block {
   padding-top: 6.25rem;
   padding-bottom: 6.25rem;
 }
+@media (max-width: 992px) {
+  .shedules-list_block {
+    padding-top: 3.75rem;
+    padding-bottom: 3.125rem;
+  }
+}
+@media (max-width: 768px) {
+  .shedules-list_block {
+    padding-top: 2.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .shedules-list_block {
+    padding-bottom: 2.5rem;
+  }
+}
 .shedules-list_item {
   margin-bottom: 2.5rem;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  .shedules-list_item {
+    padding: 1.125rem 1.375rem;
+    margin-bottom: 0;
+    background: var(--white);
+  }
+}
+@media (max-width: 576px) {
+  .shedules-list_item {
+    padding: 0.75rem 0.9375rem;
+  }
 }
 .shedules-list_item .item-title {
   position: relative;
-  height: inherit;
+  height: initial;
   min-height: 3.75rem;
   padding-left: 0.75rem;
   margin-bottom: 0.625rem;
+}
+@media (max-width: 1200px) {
+  .shedules-list_item .item-title {
+    font-size: 1.8125rem;
+    min-height: 2.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .shedules-list_item .item-title {
+    min-height: initial;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 110%;
+    letter-spacing: -0.01em;
+    color: var(--body-text);
+  }
 }
 .shedules-list_item .item-title:after {
   position: absolute;
@@ -2944,6 +3313,29 @@ SHEDULES LIST DESKTOP
   line-height: 140%;
   letter-spacing: -0.01em;
   color: var(--dark);
+}
+@media (max-width: 1200px) {
+  .shedules-list_item .item-content {
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 992px) {
+  .shedules-list_item .item-content {
+    font-size: 1rem;
+    padding-left: 0;
+  }
+  .shedules-list_item .item-content:after {
+    content: none !important;
+  }
+}
+@media (max-width: 576px) {
+  .shedules-list_item .item-content {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: var(--grey);
+  }
 }
 .shedules-list_item .item-content:after {
   position: absolute;
