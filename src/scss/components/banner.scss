@@ -13,6 +13,19 @@ BANNER
 		min-height: initial;
 	}
 
+	.mobile-vs{
+		display: none;
+		@media (max-width:440px){
+			display: inline;
+		}		
+	}
+	.desktop-vs{
+		display: inline;
+		@media (max-width:440px){
+			display: none;
+		}
+	}
+
 	&-background {
 		min-height: rem(1080);
 		max-width: rem(1920);
@@ -67,8 +80,7 @@ BANNER
 				font-size: rem(48);
 			}
 
-			@include sm {
-				max-width: 94%;
+			@include sm {				
 				font-size: rem(27);
 				line-height: 150%;
 

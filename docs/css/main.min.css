@@ -1052,6 +1052,22 @@ BANNER
     min-height: initial;
   }
 }
+.banner .mobile-vs {
+  display: none;
+}
+@media (max-width: 440px) {
+  .banner .mobile-vs {
+    display: inline;
+  }
+}
+.banner .desktop-vs {
+  display: inline;
+}
+@media (max-width: 440px) {
+  .banner .desktop-vs {
+    display: none;
+  }
+}
 .banner-background {
   min-height: 67.5rem;
   max-width: 120rem;
@@ -1102,7 +1118,6 @@ BANNER
 }
 @media (max-width: 576px) {
   .banner-block_title {
-    max-width: 94%;
     font-size: 1.6875rem;
     line-height: 150%;
     margin-bottom: 1.25rem;

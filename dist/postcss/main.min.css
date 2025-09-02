@@ -921,6 +921,14 @@ BANNER
   min-height: 67.5rem;
 }
 
+.banner .mobile-vs {
+  display: none;
+}
+
+.banner .desktop-vs {
+  display: inline;
+}
+
 .banner-background {
   min-height: 67.5rem;
   max-width: 120rem;
@@ -4036,7 +4044,6 @@ MEDIAQUERIES
   }
 
   .banner-block_title {
-    max-width: 94%;
     font-size: 1.6875rem;
     line-height: 150%;
     margin-bottom: 1.25rem;
@@ -4464,6 +4471,16 @@ MEDIAQUERIES
 
   .welcome .swiper {
     margin-right: 1.75rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .banner .mobile-vs {
+    display: inline;
+  }
+
+  .banner .desktop-vs {
+    display: none;
   }
 }
 
