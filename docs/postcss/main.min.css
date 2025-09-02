@@ -572,6 +572,7 @@ ABONEMENT BLOCK
   justify-content: center;
 }
 
+.abonement-card_logo img,
 .abonement-card_logo svg {
   width: 2.875rem;
   height: 2.875rem;
@@ -1462,6 +1463,7 @@ FOOTER
   gap: 1.5625rem;
 }
 
+.footer-group_logo img,
 .footer-group_logo svg,
 .footer-group_logo .icon--logo-foo {
   aspect-ratio: 220/146;
@@ -1993,6 +1995,7 @@ HEADER
   height: 6.875rem;
 }
 
+.header_logo img,
 .header_logo svg {
   width: 6.875rem;
   height: 6.875rem;
@@ -3312,13 +3315,6 @@ MEDIAQUERIES
     min-height: 46.875rem;
   }
 
-  .banner-background {
-    padding-top: 8.75rem;
-    padding-bottom: 3.75rem;
-    min-height: 46.875rem;
-    background-position: 65% center;
-  }
-
   .banner-block_title {
     font-size: 3rem;
   }
@@ -3420,6 +3416,13 @@ MEDIAQUERIES
 }
 
 @media (max-width: 1100px) {
+  .banner-background {
+    padding-top: 8.75rem;
+    padding-bottom: 3.75rem;
+    min-height: 46.875rem;
+    background-position: 65% center;
+  }
+
   .mobile-menu.active {
     left: 0;
   }
@@ -3438,6 +3441,7 @@ MEDIAQUERIES
     height: 3.125rem;
   }
 
+  .header_logo img,
   .header_logo svg {
     width: 3.125rem;
     height: 3.125rem;
@@ -3895,6 +3899,7 @@ MEDIAQUERIES
     height: 2.75rem;
   }
 
+  .abonement-card_logo img,
   .abonement-card_logo svg {
     -webkit-transform: translateY(-2px);
     -ms-transform: translateY(-2px);
@@ -4031,8 +4036,8 @@ MEDIAQUERIES
   }
 
   .banner-block_title {
-    max-width: 91%;
-    font-size: 1.75rem;
+    max-width: 94%;
+    font-size: 1.6875rem;
     line-height: 150%;
     margin-bottom: 1.25rem;
   }

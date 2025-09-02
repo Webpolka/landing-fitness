@@ -32,6 +32,8 @@ HEADER
 	&_logo {
 		width: rem(110);
 		height: rem(110);
+
+		img,
 		svg {
 			width: rem(110);
 			height: rem(110);
@@ -39,6 +41,7 @@ HEADER
 		@media (max-width: 1100px) {
 			width: rem(50);
 			height: rem(50);
+			img,
 			svg {
 				width: rem(50);
 				height: rem(50);
@@ -70,7 +73,7 @@ HEADER
 			align-items: center;
 			gap: rem(45);
 
-			@include xl{
+			@include xl {
 				gap: rem(35);
 			}
 
@@ -84,7 +87,7 @@ HEADER
 
 					transition: all 0.3s ease-in-out 0.3s;
 
-					@include xl{
+					@include xl {
 						font-size: rem(16);
 					}
 				}

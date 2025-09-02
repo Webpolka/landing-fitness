@@ -285,6 +285,7 @@ ABONEMENT BLOCK
 
 				width: rem(44);
 				height: rem(44);
+				img,
 				svg {
 					transform: translateY(-2px);
 					width: rem(37) !important;
@@ -292,6 +293,7 @@ ABONEMENT BLOCK
 				}
 			}
 
+			img,
 			svg {
 				width: rem(46);
 				height: rem(46);

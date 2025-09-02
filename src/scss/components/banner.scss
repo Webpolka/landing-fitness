@@ -29,7 +29,7 @@ BANNER
 
 		overflow: hidden;
 
-		@include xl {
+		@media (max-width:1100px) {
 			padding-top: rem(140);
 			padding-bottom: rem(60);
 
@@ -68,8 +68,8 @@ BANNER
 			}
 
 			@include sm {
-				max-width: 91%;
-				font-size: rem(28);
+				max-width: 94%;
+				font-size: rem(27);
 				line-height: 150%;
 
 				margin-bottom: rem(20);
